@@ -12,9 +12,9 @@
                     <div class="v-responsive__content" style="width: 213px;"></div>
                 </div>
                 <div class="spacer"></div>
-                <div class="v-toolbar__items"><a href="#try-it"
+                <div class="v-toolbar__items"><a href="/home"
                                                  class="v-btn v-btn--flat v-btn--text theme--dark v-size--default"><span
-                    class="v-btn__content"> Try It </span></a></div>
+                    class="v-btn__content"> home </span></a></div>
             </div>
         </v-app>
         <v-main>
