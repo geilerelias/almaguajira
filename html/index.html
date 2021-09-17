@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+<div id="app">
+    <v-app>
+        <header
+            class="v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--flat v-app-bar v-app-bar--fixed transparent"
+            data-booted="true"
+            style="height: 64px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;">
+            <div class="v-toolbar__content" style="height: 64px;">
+                <div class="v-responsive v-image shrink" style="max-width: 50%;">
+                    <div class="v-responsive__sizer" style="padding-bottom: 21.5962%;"></div>
+                    <div class="v-image__image v-image__image--contain"
+                         style="background-image: url(./images/nombre.png); background-position: center center;"></div>
+                    <div class="v-responsive__content" style="width: 213px;"></div>
+                </div>
+                <div class="spacer"></div>
+                <div class="v-toolbar__items"><a href="#try-it"
+                                                 class="v-btn v-btn--flat v-btn--text theme--dark v-size--default"><span
+                    class="v-btn__content"> Try It </span></a></div>
+            </div>
+        </header>
+
+        <v-main>
+            <section id="home" class="pa-0">
+                <v-img cover
+                       src="./images/bg.jpg"
+                       class="white--text"
+                       gradient="to top right, rgba(13, 3, 29, 0.85), rgba(25, 25, 38, 0.85)"
+                       style="height: 100vh;"
+                >
+                    <v-container class="fill-height">
+                        <v-row class="pt-5 px-3 align-center">
+                            <v-col cols="12" sm="3">
+                                <v-img contain
+                                       max-height="200px"
+                                       src="./images/logo.png">
+                                </v-img>
+                            </v-col>
+                            <v-col cols="12" sm="5" class="v-sheet theme--dark transparent" style="max-width: 500px;">
+                                <h1 class="mb-4 display-2">Página en construcción</h1>
+
+                                <p class="title font-weight-light">
+                                    Estamos trabajando duro para culminar el desarrollo de este sitio.
+                                </p>
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-img>
+            </section>
+
+            </main>
+    </v-app>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+    })
+</script>
+</body>
+</html>
