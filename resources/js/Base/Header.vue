@@ -1,39 +1,35 @@
 <template>
     <div class="mb-1">
-        <v-system-bar color="primary" absolute v-if="$vuetify.breakpoint.smAndUp"
-                      :class="$vuetify.breakpoint.mdAndUp?'px-200':'px-6'"
-                      height="30">
-            <div class="d-flex social-icons white--text">
-                <v-btn icon text rounded>
-                    <v-icon color="white" size="20">
-                        mdi-facebook
-                    </v-icon>
-                </v-btn>
-                <v-btn icon text rounded>
-                    <v-icon color="white" size="20">
-                        mdi-twitter
-                    </v-icon>
-                </v-btn>
-                <v-btn icon text rounded>
-                    <v-icon color="white" size="20">
-                        mdi-instagram
-                    </v-icon>
-                </v-btn>
-                <v-btn icon text rounded>
-                    <v-icon color="white" size="20">
-                        mdi-whatsapp
-                    </v-icon>
-                </v-btn>
-            </div>
+        <v-expand-transition>
+            <v-system-bar color="primary" absolute v-if="$vuetify.breakpoint.smAndUp &&flat"
+                          :class="$vuetify.breakpoint.mdAndUp?'px-200':'px-6'"
+                          height="30">
+                <div class="d-flex  white--text">
+                    <v-btn icon text rounded href="https://www.facebook.com/AlmaGuajiraViajes/" target="_blank">
+                        <v-img height="20" width="20" contain :src="facebook"></v-img>
+                    </v-btn>
+                    <v-btn icon text rounded href="https://vm.tiktok.com/ZMR4JhtTn/" target="_blank">
+                        <v-img height="20" width="20" contain :src="tiktok"></v-img>
+                    </v-btn>
+                    <v-btn icon text rounded href="https://www.instagram.com/almaguajiraviajes/" target="_blank">
+                        <v-img height="20" width="20" contain :src="instagram"></v-img>
+                    </v-btn>
+                    <v-btn icon text rounded href="https://wa.me/message/LLZ7EP3T25KAK1" target="_blank">
+                        <v-img height="20" width="20" contain :src="whatsapp"></v-img>
+                    </v-btn>
+                </div>
 
-            <v-spacer></v-spacer>
+                <v-spacer></v-spacer>
 
-            <div class="white--text">
-                <v-icon notranslate color="white">mdi-phone</v-icon>
-                <span>Call us: <span class="font-weight-bold">0800 - 1923</span></span>
-            </div>
+                <div class="d-flex justify-center align-center white--text">
+                    <v-btn icon text rounded href="tel:+57 320 5011419">
+                        <v-img notranslate height="20" width="20" contain :src="tel" class="mr-1"></v-img>
+                    </v-btn>
+                    <span>Call us: <span class="font-weight-bold">+57 320 5011419</span></span>
+                </div>
 
-        </v-system-bar>
+            </v-system-bar>
+        </v-expand-transition>
         <v-app-bar
             :extended="$vuetify.breakpoint.mdAndUp && flat"
             :absolute="$vuetify.breakpoint.mdAndUp && flat"
@@ -262,9 +258,11 @@
                 @click="drawer?setDrawer(false):setDrawer(true)"
             ></v-app-bar-nav-icon>
 
-            <template transition="expand-x-transition" v-if="$vuetify.breakpoint.mdAndUp && showExtendTolbar" v-slot:extension>
-                <v-fade-transition>
-                    <v-container v-if="$vuetify.breakpoint.mdAndUp && showExtendTolbar" class="py-0 d-none d-md-block fill-height">
+            <template v-if="$vuetify.breakpoint.mdAndUp && showExtendTolbar"
+                      v-slot:extension>
+                <v-expand-x-transition>
+                    <v-container v-if="$vuetify.breakpoint.mdAndUp && showExtendTolbar"
+                                 class="py-0 d-none d-md-block fill-height">
                         <v-divider color="white"></v-divider>
 
                         <v-toolbar-items
@@ -281,7 +279,7 @@
 
                         </v-toolbar-items>
                     </v-container>
-                </v-fade-transition>
+                </v-expand-x-transition>
             </template>
 
         </v-app-bar>
@@ -306,6 +304,17 @@
 <script>
 import logo from "../../images/logo.png";
 import eslogan from "../../images/eslogan.png";
+
+import tiktok from '@/../images/btns/tiktok.png';
+import whatsapp from '@/../images/btns/whatsapp.png'
+import youtube from '@/../images/btns/youtube.png'
+import tel from '@/../images/btns/tel.png'
+import messenger from '@/../images/btns/messenger.png'
+import llamada from '@/../images/btns/llamada.png'
+import instagram from '@/../images/btns/instagram.png'
+import gmail from '@/../images/btns/gmail.png'
+import facebook from '@/../images/btns/facebook.png'
+
 
 import {mapMutations, mapState} from "vuex";
 
@@ -338,6 +347,16 @@ export default {
     created() {
     },
     data: () => ({
+        tiktok: tiktok,
+        whatsapp: whatsapp,
+        youtube: youtube,
+        tel: tel,
+        messenger: messenger,
+        llamada: llamada,
+        instagram: instagram,
+        gmail: gmail,
+        facebook: facebook,
+
         topAnterior: 0,
         showExtendTolbar: true,
         fav: true,
@@ -372,14 +391,6 @@ export default {
             "links",
             "idBusiness"
         ]),
-        localSearch: {
-            get() {
-                return this.search;
-            },
-            set(val) {
-                this.setSearch(val);
-            }
-        }
     },
     methods: {
         ...mapMutations([
@@ -450,6 +461,15 @@ export default {
 .px-20 {
     padding-left: 40px !important;
     padding-right: 40px !important;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .7s
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
+    opacity: 0
 }
 </style>
 

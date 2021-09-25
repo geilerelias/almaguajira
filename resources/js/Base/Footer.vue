@@ -4,60 +4,70 @@
             <v-container class=" py-5">
                 <v-row>
                     <v-col class="col-md-4 col-12">
-                        <div class="text-h6 text-lg-h5 font-weight-bold">Navigation</div>
+                        <div class="text-h6 text-lg-h5 font-weight-bold">Navegación</div>
                         <div class="mb-5 mt-1 primary" style="width: 80px; height: 2px;"></div>
-                        <div class="d-flex flex-wrap">
-                            <div class="w-half body-1 mb-1"><a href="/landing#"
-                                                               class="text-decoration-none text--primary">Overview</a>
-                            </div>
-                            <div class="w-half body-1 mb-1"><a href="/landing#"
-                                                               class="text-decoration-none text--primary">Features</a>
-                            </div>
-                            <div class="w-half body-1 mb-1"><a href="/landing#"
-                                                               class="text-decoration-none text--primary">Pricing</a>
-                            </div>
-                            <div class="w-half body-1 mb-1"><a href="/landing#"
-                                                               class="text-decoration-none text--primary">Documentation</a>
-                            </div>
-                            <div class="w-half body-1 mb-1"><a href="/landing#"
-                                                               class="text-decoration-none text--primary">News</a>
-                            </div>
-                            <div class="w-half body-1 mb-1"><a href="/landing#"
-                                                               class="text-decoration-none text--primary">FAQ</a>
-                            </div>
-                            <div class="w-half body-1 mb-1"><a href="/landing#"
-                                                               class="text-decoration-none text--primary">About
-                                us</a>
-                            </div>
-                            <div class="w-half body-1 mb-1"><a href="/landing#"
-                                                               class="text-decoration-none text--primary">Carrers</a>
-                            </div>
-                            <div class="w-half body-1 mb-1"><a href="/landing#"
-                                                               class="text-decoration-none text--primary">Press</a>
-                            </div>
-                        </div>
+                        <v-img gradient="to top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)"
+                               style="max-height:250px"
+                               :spect-ratio="5/4" contain
+                               :src="logo">
+                            <v-list nav
+                                    dense color="transparent">
+                                <v-list-item-group
+                                    v-model="selectedItem"
+                                    color="transparent"
+                                    active-class="primary text--accent-4"
+                                >
+                                    <inertia-link v-for="item in links"
+                                                  :key="item.title"
+                                                  :href="route(item.route)">
+                                        <v-list-item link
+                                                     :dark="route().current(item.route)"
+                                                     :class="route().current(item.route)?'active primary   white--text':''"
+                                        >
+                                            <v-list-item-icon>
+                                                <v-icon>{{ item.icon }}</v-icon>
+                                            </v-list-item-icon>
 
-                        <div class="d-flex align-center mb-4">
-                            <a href="/" class="d-flex align-center text-decoration-none mr-2">
-                                <v-card flat max-width="110">
-                                    <v-img style="max-height:78px" :spect-ratio="5/4" contain :src="logo"/>
-                                </v-card>
-                            </a>
-                        </div>
+                                            <v-list-item-content>
+                                                <v-list-item-title class="font-black">{{ item.title }}
+                                                </v-list-item-title>
+                                            </v-list-item-content>
+                                        </v-list-item>
+                                    </inertia-link>
+                                </v-list-item-group>
+                            </v-list>
+                        </v-img>
+
+
                     </v-col>
                     <v-col class="col-md-4 col-12">
-                        <div class="text-h6 text-lg-h5 font-weight-bold">Contact Information</div>
+                        <div class="text-h6 text-lg-h5 font-weight-bold">Información de Contacto</div>
                         <div class="mb-5 mt-1 primary" style="width: 80px; height: 2px;"></div>
-                        <div class="d-flex mb-2 font-weight-bold"><i aria-hidden="true"
-                                                                     class="v-icon notranslate mr-2 mdi mdi-map-marker-outline theme--light primary--text text--lighten-1"></i>
-                            W Left Street, Long Beach, Los Angeles, CA 90802 USA
+
+                        <div class="d-flex mb-2 font-weight-bold">
+                            <v-icon
+                                class="notranslate mr-2  primary--text text--lighten-1">
+                                mdi-map-marker-outline
+                            </v-icon>
+                            Cra. 7H #33a-15, Riohacha, La Guajira
                         </div>
-                        <div class="d-flex mb-2"><i aria-hidden="true"
-                                                    class="v-icon notranslate mr-2 mdi mdi-phone-outline theme--light primary--text text--lighten-1"></i><a
-                            href="#" class="text-decoration-none text--primary">+03 000 23 00 555 55</a></div>
-                        <div class="d-flex mb-2"><i aria-hidden="true"
-                                                    class="v-icon notranslate mr-2 mdi mdi-email-outline theme--light primary--text text--lighten-1"></i><a
-                            href="#" class="text-decoration-none text--primary">hello@loremcompany.com</a></div>
+
+                        <div class="d-flex mb-2">
+                            <v-icon
+                                class="notranslate mr-2 mdi  primary--text text--lighten-1">
+                                mdi-phone-outline
+                            </v-icon>
+                            <a href="tel:+57 320 5011419" class="text-decoration-none text--primary">
+                                +57 320 5011419
+                            </a>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <v-icon
+                                class="notranslate mr-2  theme--light primary--text text--lighten-1">
+                                mdi-email-outline
+                            </v-icon>
+                            <a
+                                href="mailto:raguismendoza@hotmail.com <Raguismendoza@hotmail.com>;" class="text-decoration-none text--primary">Raguismendoza@hotmail.com</a></div>
                     </v-col>
                     <v-col class="col-md-4 col-12">
                         <div class="text-h6 text-lg-h5 font-weight-bold">Newsletter</div>
@@ -114,19 +124,18 @@
 </template>
 
 <script>
+import {mapMutations, mapState} from "vuex";
 import logo from "../../images/logo.png";
 
 export default {
     name: "Footer",
     data: () => ({
         logo: logo,
-        links: [
-            {name: "Inicio", route: "home"},
-            {name: "Acerca de", route: "aboutme"},
-            {name: "Servicios", route: "services"},
-            {name: "Contacto", route: "contact"}
-        ]
-    })
+        selectedItem: null,
+    }),
+    computed: {
+        ...mapState(["links"]),
+    },
 };
 </script>
 

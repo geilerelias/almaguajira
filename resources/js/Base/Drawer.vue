@@ -306,7 +306,7 @@
                 <v-list dense>
                     <v-list-item-group
                         v-model="group"
-                        active-class="primary text&#45;&#45;accent-4"
+                        active-class="primary text--accent-4"
                     >
                         <inertia-link v-for="item in links"
                                       :key="item.title"
@@ -495,7 +495,7 @@ export default {
         dialog: false,
         group: null,
         logo: logo,
-        eslogan:eslogan,
+        eslogan: eslogan,
         opciones: [
             {title: "Notificaciones", icon: "mdi-bell", route: ""},
             {title: "Seguidos", icon: "mdi-account-group", route: ""},

@@ -10,16 +10,15 @@ const opts = {
     },
     theme: {
         themes: {
-            light:
-                {
-                    primary: '#2b65ae',
-                    secondary: '#e91e63',
-                    accent: '#ff9800',
-                    error: '#f44336',
-                    warning: '#ffc107',
-                    info: '#03a9f4',
-                    success: '#8bc34a'
-                },
+            light: {
+                primary: '#2b65ae',
+                secondary: '#10315a',
+                accent: '#d07b42',
+                error: '#f44336',
+                warning: '#ffc107',
+                info: '#03a9f4',
+                success: '#8bc34a'
+            },
             dark: {
                 primary: '#2b65ae',
                 secondary: '#c45911',

@@ -27,11 +27,11 @@ Route::get('/home', function () {
 
 Route::get('/about-us', function () {
     return Inertia\Inertia::render('AboutUs');
-})->name('aboutUs');
+})->name('about-us');
 
 Route::get('/our-fates', function () {
     return Inertia\Inertia::render('OurFates');
-})->name('ourFates');
+})->name('our-fates');
 
 Route::get('/gallery', function () {
     return Inertia\Inertia::render('Gallery');
@@ -39,8 +39,8 @@ Route::get('/gallery', function () {
 
 Route::get('/frequent-questions', function () {
     return Inertia\Inertia::render('FrequentQuestions');
-})->name('frequentQuestions');
+})->name('frequent-questions');
 
 Route::get('/contact-us', function () {
     return Inertia\Inertia::render('ContactUs');
-})->name('contactUs');
+})->name('contact-us');
