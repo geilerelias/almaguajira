@@ -4,21 +4,6 @@
             <v-system-bar color="primary" absolute v-if="$vuetify.breakpoint.smAndUp &&flat"
                           :class="$vuetify.breakpoint.mdAndUp?'px-200':'px-6'"
                           height="30">
-                <div class="d-flex  white--text">
-                    <v-btn icon text rounded href="https://www.facebook.com/AlmaGuajiraViajes/" target="_blank">
-                        <v-img height="20" width="20" contain :src="facebook"></v-img>
-                    </v-btn>
-                    <v-btn icon text rounded href="https://vm.tiktok.com/ZMR4JhtTn/" target="_blank">
-                        <v-img height="20" width="20" contain :src="tiktok"></v-img>
-                    </v-btn>
-                    <v-btn icon text rounded href="https://www.instagram.com/almaguajiraviajes/" target="_blank">
-                        <v-img height="20" width="20" contain :src="instagram"></v-img>
-                    </v-btn>
-                    <v-btn icon text rounded href="https://wa.me/message/LLZ7EP3T25KAK1" target="_blank">
-                        <v-img height="20" width="20" contain :src="whatsapp"></v-img>
-                    </v-btn>
-                </div>
-
                 <v-spacer></v-spacer>
 
                 <div class="d-flex justify-center align-center white--text">
@@ -302,8 +287,8 @@
 </template>
 
 <script>
-import logo from "../../images/logo.png";
-import eslogan from "../../images/eslogan.png";
+import logo from "../../images/logo-nuevo.png";
+import eslogan from "../../images/eslogan-nuevo.png";
 
 import tiktok from '@/../images/btns/tiktok.png';
 import whatsapp from '@/../images/btns/whatsapp.png'

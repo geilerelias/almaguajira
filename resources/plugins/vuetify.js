@@ -4,6 +4,12 @@ import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(Vuetify)
 
+// Translation provided by Vuetify (javascript)
+import en from 'vuetify/lib/locale/en'
+import es from 'vuetify/lib/locale/es'
+
+
+
 const opts = {
     icons: {
         iconfont: 'mdi', // default - only for display purposes
@@ -30,6 +36,11 @@ const opts = {
             },
         },
     },
+    lang: {
+        locales: { en, es },
+        current: 'es',
+    },
+
 }
 
 export default new Vuetify(opts)
