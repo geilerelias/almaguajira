@@ -296,6 +296,7 @@ export default {
 </script>
 
 <style>
+
 .v-btn {
     outline: none !important;
 }

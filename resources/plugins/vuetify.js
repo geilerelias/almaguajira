@@ -8,8 +8,6 @@ Vue.use(Vuetify)
 import en from 'vuetify/lib/locale/en'
 import es from 'vuetify/lib/locale/es'
 
-
-
 const opts = {
     icons: {
         iconfont: 'mdi', // default - only for display purposes
@@ -17,7 +15,7 @@ const opts = {
     theme: {
         themes: {
             light: {
-                primary: '#2b65ae',
+                primary: '#0b7bdb',
                 secondary: '#10315a',
                 accent: '#d07b42',
                 error: '#f44336',
@@ -40,6 +38,7 @@ const opts = {
         locales: { en, es },
         current: 'es',
     },
+
 
 }
 

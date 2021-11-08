@@ -1,149 +1,74 @@
 <template>
     <div>
-        <v-footer class="transparent">
-            <v-container class=" py-5">
-                <v-row>
-                    <v-col class="col-md-4 col-12">
-                        <div class="text-h6 text-lg-h5 font-weight-bold">Navegación</div>
-                        <div class="mb-5 mt-1 primary" style="width: 80px; height: 2px;"></div>
-                        <v-img gradient="to top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)"
-                               style="max-height:250px"
-                               :spect-ratio="5/4" contain
-                               :src="logo">
-                            <v-list nav
-                                    dense color="transparent">
-                                <v-list-item-group
-                                    v-model="selectedItem"
-                                    color="transparent"
-                                    active-class="primary text--accent-4"
-                                >
-                                    <inertia-link v-for="item in links"
-                                                  :key="item.title"
-                                                  :href="route(item.route)">
-                                        <v-list-item link
-                                                     :dark="route().current(item.route)"
-                                                     :class="route().current(item.route)?'active primary   white--text':''"
-                                        >
-                                            <v-list-item-icon>
-                                                <v-icon>{{ item.icon }}</v-icon>
-                                            </v-list-item-icon>
-
-                                            <v-list-item-content>
-                                                <v-list-item-title class="font-black">{{ item.title }}
-                                                </v-list-item-title>
-                                            </v-list-item-content>
-                                        </v-list-item>
-                                    </inertia-link>
-                                </v-list-item-group>
-                            </v-list>
-                        </v-img>
-
-
-                    </v-col>
-                    <v-col class="col-md-4 col-12">
-                        <div class="text-h6 text-lg-h5 font-weight-bold">Información de Contacto</div>
-                        <div class="mb-5 mt-1 primary" style="width: 80px; height: 2px;"></div>
-
-                        <div class="d-flex mb-2 font-weight-bold">
-                            <v-icon
-                                class="notranslate mr-2  primary--text text--lighten-1">
-                                mdi-map-marker-outline
-                            </v-icon>
-                            Cra. 7H #33a-15, Riohacha, La Guajira
+        <v-footer>
+            <v-container class="container">
+                <div class="d-flex flex-column flex-md-row align-center justify-md-space-between mb-4">
+                    <div class="d-flex flex-column flex-md-row align-center">
+                        <div class="d-flex align-center">
+                            <v-img max-width="50" style="max-height:50px" :spect-ratio="5/4" contain :src="logo"/>
+                            <v-img max-width="150" style="max-height:40px" :spect-ratio="16/9" contain :src="eslogan"/>
                         </div>
 
-                        <div class="d-flex mb-2">
-                            <v-icon
-                                class="notranslate mr-2 mdi  primary--text text--lighten-1">
-                                mdi-phone-outline
-                            </v-icon>
-                            <a href="tel:+57 320 5011419" class="text-decoration-none text--primary">
-                                +57 320 5011419
-                            </a>
+                        <div class="my-3 my-md-0">
+                            <inertia-link v-for="item in links"
+                                          :key="item.id"
+                                          :href="item.route"
+                                          class="text-decoration-none ml-md-4 secondary--text text--lighten-3">
+                                {{ item.title }}
+                            </inertia-link>
                         </div>
-                        <div class="d-flex mb-2">
-                            <v-icon
-                                class="notranslate mr-2  theme--light primary--text text--lighten-1">
-                                mdi-email-outline
-                            </v-icon>
-                            <a
-                                href="mailto:raguismendoza@hotmail.com <Raguismendoza@hotmail.com>;"
-                                class="text-decoration-none text--primary">Raguismendoza@hotmail.com</a></div>
-                    </v-col>
-                    <v-col class="col-md-4 col-12">
-                        <div class="text-h6 text-lg-h5 font-weight-bold">Newsletter</div>
-                        <div class="mb-5 mt-1 primary" style="width: 80px; height: 2px;"></div>
-                        <div class="d-flex flex-column flex-lg-row w-full">
-                            <div
-                                class="v-input mr-lg-2 v-input--dense theme--light v-text-field v-text-field--single-line v-text-field--solo v-text-field--is-booted v-text-field--enclosed v-text-field--outlined">
-                                <div class="v-input__control">
-                                    <div class="v-input__slot" style="height: 44px;">
-                                        <fieldset aria-hidden="true">
-                                            <legend><span>​</span></legend>
-                                        </fieldset>
-                                        <div class="v-text-field__slot"><label for="input-501"
-                                                                               class="v-label theme--light"
-                                                                               style="left: 0px; right: auto; position: absolute;">Your
-                                            email</label><input id="input-501" type="text"></div>
-                                    </div>
-                                    <div class="v-text-field__details">
-                                        <div class="v-messages theme--light">
-                                            <div class="v-messages__wrapper"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button"
-                                    class="v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--large primary"><span
-                                class="v-btn__content">Subscribe</span></button>
-                        </div>
-                        <div class="text-center text-md-right mt-4 mt-lg-2"> Connect
-                            <div class="d-flex  white--text">
-                                <v-btn text
-                                       height="40" width="40"
-                                       min-width="40"
-                                       class="mr-1"
-                                       href="https://www.facebook.com/AlmaGuajiraViajes/" target="_blank">
-                                    <v-img height="40" width="40" contain :src="facebook"></v-img>
-                                </v-btn>
-                                <v-btn text
-                                       height="40" width="40"
-                                       min-width="40"
-                                       class="mr-1"
-                                       href="https://vm.tiktok.com/ZMR4JhtTn/" target="_blank">
-                                    <v-img height="40" width="40" contain :src="tiktok"></v-img>
-                                </v-btn>
-                                <v-btn text
-                                       height="40" width="40"
-                                       min-width="40"
-                                       class="mr-1"
-                                       href="https://www.instagram.com/almaguajiraviajes/" target="_blank">
-                                    <v-img height="40" width="40" contain :src="instagram"></v-img>
-                                </v-btn>
 
-                                <v-btn v-for="item in socialmedia" :key="item.id"
-                                       text
-                                       height="40" width="40"
-                                       min-width="40"
-                                       class="mr-1 primary"
-                                       :href="item.link" target="_blank">
-                                    <v-img height="40" width="40" contain :src="item.src"></v-img>
-                                </v-btn>
-                            </div>
+                    </div>
+                    <div>
+                        <div class=" d-flex text-center justify-end align-center text-md-right mt-4 mt-lg-2">
+                            Conectar
+
+                            <v-btn v-for="item in socialmedia" :key="item.id"
+                                   icon
+                                   height="30" width="30"
+                                   min-width="30"
+                                   class="ml-2"
+                                   :href="item.link" target="_blank">
+                                <v-img height="30" width="30" contain :src="item.src"></v-img>
+                            </v-btn>
                         </div>
-                    </v-col>
-                </v-row>
-                <hr role="separator" aria-orientation="horizontal" class="my-3 v-divider theme--light">
-                <div class="text-center caption"> © Indielayer 2021. All Rights Reserved</div>
+                    </div>
+                </div>
+                <v-divider class="my-3  theme--light"/>
+                <div class="d-flex flex-column flex-md-row align-center justify-md-space-between body-2">
+                    <div class="d-flex mb-2 font-weight-bold">
+                        <v-icon
+                            class="notranslate mr-2  primary--text text--lighten-1">
+                            mdi-map-marker-outline
+                        </v-icon>
+                        Cra. 7H #33a-15, Riohacha, La Guajira
+                    </div>
+                    <div class="text-center caption"> © almaguajira.com 2021. Todos los derechos reservados</div>
+                    <div class="d-flex mb-2">
+                        <v-icon
+                            class="notranslate mr-2  theme--light primary--text text--lighten-1">
+                            mdi-email-outline
+                        </v-icon>
+                        <a
+                            href="mailto:raguismendoza@hotmail.com <raguismendoza@hotmail.com>;"
+                            class="text-decoration-none text--primary">
+                            raguismendoza@hotmail.com
+                        </a>
+                    </div>
+
+
+                </div>
+
+
             </v-container>
         </v-footer>
-
     </div>
 </template>
 
 <script>
 import {mapMutations, mapState} from "vuex";
-import logo from "../../images/logo.png";
+import logo from "../../images/logo-nuevo.png";
+import eslogan from "../../images/eslogan-nuevo.png";
 import tiktok from '@/../images/btns/tiktok.png';
 import whatsapp from '@/../images/btns/whatsapp.png'
 import youtube from '@/../images/btns/youtube.png'
@@ -165,10 +90,11 @@ export default {
         gmail,
         facebook,
         logo: logo,
+        eslogan,
         selectedItem: null,
         socialmedia: [
             {
-                link: 'https://www.facebook.com/AlmaGuajiraViajes/' ,
+                link: 'https://www.facebook.com/AlmaGuajiraViajes/',
                 src: facebook,
                 name: 'facebook'
             },
@@ -199,4 +125,5 @@ export default {
 .w-half {
     width: 50% !important;
 }
+
 </style>

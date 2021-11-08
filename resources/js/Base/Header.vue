@@ -23,8 +23,6 @@
             :class="$vuetify.breakpoint.mdAndUp && flat?'px-20 mt-7':''"
             color="white lighten-3"
         >
-
-
             <v-btn v-if="!route().current('home')" @click="back" text light fab class="mr-1 ">
                 <v-icon>mdi-arrow-left</v-icon>
             </v-btn>
@@ -395,7 +393,7 @@ export default {
             if (top > 50) {
                 this.fab = true;
                 this.flat = false;
-                console.log(top)
+               // console.log(top)
                 if (top > this.topAnterior) {
                     this.topAnterior = top;
                     this.showExtendTolbar = false;
@@ -428,11 +426,7 @@ export default {
             window.history.back();
             //return document.referrer;
         },
-        searching() {
-            if (!this.route().current("marketplace")) {
-                this.$inertia.get("/marketplace");
-            }
-        }
+
     }
 };
 </script>

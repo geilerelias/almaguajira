@@ -227,21 +227,6 @@
             </v-toolbar>
             <v-divider></v-divider>
             <v-card-text>
-                <!--                <template v-if="$page.user!==null">
-                                            <v-list-item two-line>
-                                                <v-list-item-avatar style="border: solid 1px black">
-                                                    <img :src="$page.user.profile_photo_url"
-                                                         :alt="$page.user.name">
-                                                </v-list-item-avatar>
-
-                                                <v-list-item-content>
-                                                    <v-list-item-title>{{ $page.user.name }}</v-list-item-title>
-                                                    <v-list-item-subtitle>{{ $page.user.email }}</v-list-item-subtitle>
-                                                </v-list-item-content>
-                                            </v-list-item>
-                                            <v-divider></v-divider>
-                </template>-->
-
                 <template v-if="$page.user!==null">
                     <div class="text-center">
                         <v-list>
@@ -507,7 +492,6 @@ export default {
             {title: "Login", icon: "mdi-account-lock", route: "/login"},
             {title: "Sign Up", icon: "mdi-account-plus", route: "/register"}
         ],
-        businesses: [],
         right: null,
         notifications: false,
         sound: true,
@@ -523,14 +507,14 @@ export default {
         ]
     }),
     created() {
-        axios
-            .get(`/business/user/all`)
-            .then(response => {
-                this.businesses = response.data;
-            })
-            .catch(error => {
-                console.log(error);
-            });
+        // axios
+        //     .get(`/business/user/all`)
+        //     .then(response => {
+        //         this.businesses = response.data;
+        //     })
+        //     .catch(error => {
+        //         console.log(error);
+        //     });
     },
     watch: {
         group() {

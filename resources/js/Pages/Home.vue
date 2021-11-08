@@ -1,26 +1,138 @@
 <template>
     <app-layout>
-        <v-parallax :src="bg1" style="height: 70vh;"
-                    class="pa-0 ma-0">
-            <v-img class="pa-0 ma-0" gradient="to top, rgba(5, 11, 31, 0.8), rgba(5, 11, 31, 0.8)">
-                <v-container fluid class="fill-height px-12">
-                    <v-row align-center>
-                        <v-col style="transform-origin: center top 0px;">
-                            <div class="mb-4 display-2 white--text font-weight-light"> Hola, Somos Alma Guajira</div>
-                            <v-responsive class="white--text mb-5" style="max-width: 600px;">
-                                Un grupo de jóvenes emprendedores unidos por el amor y la pasión por la identidad
-                                cultural de nuestra tierra.
-                            </v-responsive>
-                            <inertia-link :href="route('about-us')">
-                                <v-btn contained large class="px-5 primary">
-                                    Saber más
-                                </v-btn>
-                            </inertia-link>
-                        </v-col>
-                    </v-row>
-                </v-container>
-            </v-img>
-        </v-parallax>
+        <v-img cover
+               :src="bg1"
+               class="white--text"
+               gradient="rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65), rgb(0, 0, 0)"
+               style="height:calc(100vh - 142px);"
+        >
+            <v-container fluid class="fill-height px-12">
+                <v-row class="fill-height align-bottom d-flex justify-start align-end">
+                    <v-col class="pb-12">
+                        <div class="mb-4 display-2 white--text font-weight-light"> Hola, Somos Alma Guajira</div>
+                        <v-responsive class="white--text mb-5" style="max-width: 600px;">
+                            Un grupo de jóvenes emprendedores unidos por el amor y la pasión por la identidad
+                            cultural de nuestra tierra.
+                        </v-responsive>
+                        <inertia-link :href="route('about-us')">
+                            <v-btn contained large class="px-5 primary">
+                                Saber más
+                            </v-btn>
+                        </inertia-link>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-img>
+
+
+        <section>
+            <v-container class="py-12">
+                <div class="text-center  mb-6">
+                    <div class="d-inline-flex mb-4">
+                        <v-img max-width="100" style="max-height:100px" :spect-ratio="5/4" contain :src="logo"/>
+                    </div>
+
+                    <h1 class="text-h5 font-weight-bold mb-2 text-center">
+                        Visita los mejores destinos
+                    </h1>
+                    <v-divider class="primary mx-auto mb-6" style="max-width: 28px;"></v-divider>
+                </div>
+
+                <v-row class="row">
+                    <v-col class="col col-12">
+                        <div class="d-flex justify-space-between align-end flex-wrap">
+                            <div>
+                                <h2>Mejores sitios turisticos</h2>
+                                <h6 class="grey--text grey--lighten-3 font-weight-regular">
+                                    listas seleccionadas de los mejores sitios turisticos de La Guajira, basadas en
+                                    tendencias
+                                </h6>
+                            </div>
+                            <div>
+                                <inertia-link href="/our-fates" aria-current="page"
+                                              class="text-decoration-none nuxt-link-exact-active nuxt-link-active">
+                                    Ver todos los destinos
+                                </inertia-link>
+                            </div>
+                        </div>
+                    </v-col>
+                    <v-col class="col-sm-6 col-md-4 col-lg-3 col-12"
+                           v-for="(item,i) in items.slice(0,4)" :key="item.id">
+                        <inertia-link :href="item.link"
+                                      class="text-decoration-none">
+                            <v-hover v-slot="{ hover }">
+                                <v-card class="pa-0">
+                                    <v-img cover
+                                           style="transition: all 0.5s;"
+                                           :class="hover ? 'zoom' : ''"
+                                           :src="item.src">
+                                    </v-img>
+                                </v-card>
+
+                            </v-hover>
+                        </inertia-link>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </section>
+
+        <v-sheet class="theme--light">
+            <v-container class="py-4 py-lg-8">
+                <v-row>
+                    <v-col class="col-md-6 col-12">
+                        <h2 class="text-h6 text-lg-h5 secondary--text font-weight-bold ">BUENAS PRACTICAS</h2>
+                        <div class="text-h6 text-lg-h5 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Natus impedit error labore doloremque fugit! Dolor fugit molestiae vero quos quisquam nobis,
+                            eos debitis magni omnis ea incidunt amet voluptate dignissimos!
+                        </div>
+                        <div class="mt-4">
+                            <a href="/ui/landing/logos/logos5#"
+                               class="text-decoration-none font-weight-bold text-h6">
+                                Learn More
+                            </a>
+                        </div>
+                    </v-col>
+                    <div class="col-md-6 col-12">
+                        <div data-v-d63f1ef4="" class="logos5 text-center">
+                            <div data-v-d63f1ef4="" class="row row--dense">
+                                <div data-v-d63f1ef4="" class="col-sm-6 col-12"><a data-v-d63f1ef4="" href="#">
+                                    <div data-v-d63f1ef4="" class="v-sheet theme--light surface"><img data-v-d63f1ef4=""
+                                                                                                      src="/img/logo-1.c42ab887.svg">
+                                    </div>
+                                </a></div>
+                                <div data-v-d63f1ef4="" class="col-sm-6 col-12"><a data-v-d63f1ef4="" href="#">
+                                    <div data-v-d63f1ef4="" class="v-sheet theme--light surface"><img data-v-d63f1ef4=""
+                                                                                                      src="/img/logo-2.00f80319.svg">
+                                    </div>
+                                </a></div>
+                                <div data-v-d63f1ef4="" class="col-sm-6 col-12"><a data-v-d63f1ef4="" href="#">
+                                    <div data-v-d63f1ef4="" class="v-sheet theme--light surface"><img data-v-d63f1ef4=""
+                                                                                                      src="/img/logo-3.6af5faab.svg">
+                                    </div>
+                                </a></div>
+                                <div data-v-d63f1ef4="" class="col-sm-6 col-12"><a data-v-d63f1ef4="" href="#">
+                                    <div data-v-d63f1ef4="" class="v-sheet theme--light surface"><img data-v-d63f1ef4=""
+                                                                                                      src="/img/logo-4.a84b682f.svg">
+                                    </div>
+                                </a></div>
+                                <div data-v-d63f1ef4="" class="col-sm-6 col-12"><a data-v-d63f1ef4="" href="#">
+                                    <div data-v-d63f1ef4="" class="v-sheet theme--light surface"><img data-v-d63f1ef4=""
+                                                                                                      src="/img/logo-5.a13d4679.svg">
+                                    </div>
+                                </a></div>
+                                <div data-v-d63f1ef4="" class="col-sm-6 col-12"><a data-v-d63f1ef4="" href="#">
+                                    <div data-v-d63f1ef4="" class="v-sheet theme--light surface"><img data-v-d63f1ef4=""
+                                                                                                      src="/img/logo-7.00e5a925.svg">
+                                    </div>
+                                </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </v-row>
+            </v-container>
+        </v-sheet>
+
+        <team-component></team-component>
 
         <v-sheet class="rounded-0" style="padding: 96px 0px;">
             <div class="text-center mb-12">
@@ -37,9 +149,7 @@
                     About our
                     Product
                 </h1>
-                <v-divider class="primary mx-auto mb-6" style="max-width: 28px;">
-
-                </v-divider>
+                <v-divider class="primary mx-auto mb-6" style="max-width: 28px;"></v-divider>
             </div>
 
             <v-container>
@@ -131,6 +241,7 @@
                 </v-row>
             </v-container>
         </v-sheet>
+
         <div class="container pt-10">
             <div data-v-7b164f18="" class="row" style="">
                 <div data-v-7b164f18="" class="col col-12">
@@ -360,6 +471,7 @@
                 </div>
             </div>
         </div>
+
         <v-sheet class="secondary  rounded-0" style="padding: 48px 0px;">
             <v-responsive class=" mx-auto" style="max-width: 1350px;">
 
@@ -474,7 +586,6 @@
 
             </v-responsive>
         </v-sheet>
-
 
         <main class="v-main" data-booted="true" style="padding: 0px;">
             <div class="v-main__wrap">
@@ -853,14 +964,95 @@
 
 <script>
 import AppLayout from "@/Layouts/AppLayout";
+import TeamComponent from "@/components/TeamComponent";
+
+import logo from '@/../images/logo.jpg'
+import eslogan from '@/../images/eslogan-nuevo.png'
 import bg1 from '@/../images/bg1.jpg'
+import imagen1 from '@/../images/destinos/imagen1.jpg'
+import imagen2 from '@/../images/destinos/imagen2.jpg'
+import imagen3 from '@/../images/destinos/imagen3.png'
+import imagen4 from '@/../images/destinos/imagen4.jpg'
+import imagen5 from '@/../images/destinos/imagen5.jpg'
+import imagen6 from '@/../images/destinos/imagen6.jpg'
+import imagen7 from '@/../images/destinos/imagen7.jpg'
+import imagen8 from '@/../images/destinos/imagen8.jpg'
+import imagen9 from '@/../images/destinos/imagen9.png'
+import imagen10 from '@/../images/destinos/imagen10.jpg'
+import imagen11 from '@/../images/destinos/imagen11.jpg'
+
 
 export default {
     components: {
-        AppLayout
+        AppLayout,
+        TeamComponent
     },
     data: () => ({
-        bg1: bg1
+        logo,
+        eslogan,
+        bg1: bg1,
+        items: [
+            {
+                link: "#",
+                src: imagen1,
+                description: "Most Searched of 2020",
+                content: "30 Places"
+            },
+            {
+                link: "#",
+                src: imagen2,
+                description: "Best Openings of 2020",
+                content: "30 Places"
+            },
+            {
+                link: "#",
+                src: imagen3,
+                description: "Trending This Week",
+                content: "30 Places"
+            },
+            {
+                link: "#",
+                src: imagen4,
+                description: "Best Of New York",
+                content: "30 Places"
+            }, {
+                link: "#",
+                src: imagen5,
+                description: "Best Of New York",
+                content: "30 Places"
+            }, {
+                link: "#",
+                src: imagen6,
+                description: "Best Of New York",
+                content: "30 Places"
+            }, {
+                link: "#",
+                src: imagen7,
+                description: "Best Of New York",
+                content: "30 Places"
+            }, {
+                link: "#",
+                src: imagen8,
+                description: "Best Of New York",
+                content: "30 Places"
+            }, {
+                link: "#",
+                src: imagen9,
+                description: "Best Of New York",
+                content: "30 Places"
+            }, {
+                link: "#",
+                src: imagen10,
+                description: "Best Of New York",
+                content: "30 Places"
+            }, {
+                link: "#",
+                src: imagen11,
+                description: "Best Of New York",
+                content: "30 Places"
+            },
+
+        ]
     })
 };
 </script>
@@ -873,4 +1065,22 @@ export default {
     padding-left: 0px !important;
     padding-right: 0px !important;
 }
+
+.bottom-0 {
+    bottom: 0 !important;
+}
+
+.p-absolute {
+    position: absolute !important;
+}
+
+/*zoom en imagenes*/
+.v-image .v-image__image {
+    transition: all 0.2s;
+}
+
+.v-image.zoom .v-image__image {
+    transform: scale(1.2);
+}
+
 </style>
