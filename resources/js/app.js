@@ -7,6 +7,7 @@ import Vue from 'vue';
 //vuetify
 import vuetify from '../plugins/vuetify'
 
+
 //material design icons
 import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
 
@@ -16,6 +17,7 @@ import { InertiaProgress } from '@inertiajs/progress'
 
 import { InertiaForm } from 'laravel-jetstream';
 import PortalVue from 'portal-vue';
+
 
 //store
 import store from "./store";
@@ -28,6 +30,11 @@ import VAnimateCss from 'v-animate-css';
 
 import VueRouter from 'vue-router'
 
+// //my styles
+// import '../css/my.css'
+
+
+// Ensure you are using css-loader
 
 Vue.use(VueRouter)
 Vue.use(VAnimateCss);

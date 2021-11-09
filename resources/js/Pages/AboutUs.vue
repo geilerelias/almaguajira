@@ -1,360 +1,294 @@
 <template>
     <app-layout>
-        <section id="hero-alt">
-            <div class="v-image v-responsive theme--dark" color="#45516b" flat="" tile="" height="225"
-                 gradient="to top, rgba(5, 11, 31, 0.8), rgba(5, 11, 31, 0.8)"
-                 src="/img/contact.68e57a91.jpg" max-width="100%" style="height: 225px; max-width: 100%;">
-                <div class="v-responsive__sizer" style="padding-bottom: 66.6667%;"></div>
-                <div class="v-image__image v-image__image--cover"
-                     style="background-image: linear-gradient(to top, rgba(5, 11, 31, 0.8), rgba(5, 11, 31, 0.8)), url(&quot;https://zero-theme-pro.vuetifyjs.com/img/contact.68e57a91.jpg&quot;); background-position: center center;"></div>
-                <div class="v-responsive__content" style="width: 1920px;">
-                    <div class="row ma-0 fill-height text-center align-center justify-center">
-                        <div class="col col-12"><h1
-                            class="text-h3 font-weight-500 mb-2 text-center white--text"> CONTACT US </h1>
-                            <div class="v-responsive base-divider primary mx-auto mb-6 base-divider--dense"
-                                 style="max-width: 28px;">
-                                <div class="v-responsive__content">
-                                    <hr role="separator" aria-orientation="horizontal"
-                                        class="v-divider theme--dark">
-                                </div>
-                            </div>
-                            <ul class="v-breadcrumbs justify-center pa-0 theme--dark">
-                                <li><a href="/" class="v-breadcrumbs__item">HOME</a></li>
-                                <li class="v-breadcrumbs__divider">&gt;</li>
-                                <li>
-                                    <div class="v-breadcrumbs__item">CONTACT US</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section>
+            <v-img flat tile cover color="#45516b"
+                   gradient="to top, rgb(5 11 31 / 47%), rgb(5 11 31 / 74%)"
+                   :src="bg"
+                   height="300" max-width="100%">
+                <v-row class="ma-0 fill-height text-center align-center justify-center">
+                    <v-col class="col col-12">
+                        <h1
+                            class="text-h3 font-weight-500 mb-2 text-center white--text">
+                            Nosotros
+                        </h1>
+                        <v-responsive class="primary mx-auto mb-6"
+                                      style="max-width: 28px;">
+                            <v-divider/>
+                        </v-responsive>
+
+                        <v-breadcrumbs class="justify-center pa-0 text--primary"
+                                       :items="items"
+                                       divider="/"
+                        ></v-breadcrumbs>
+
+                    </v-col>
+                </v-row>
+
+            </v-img>
         </section>
 
-        <div class="v-sheet theme--light rounded-0" id="about-our-product" style="padding: 96px 0px;">
-            <div class="base-section-heading text-center mb-12">
-                <div class="base-avatar d-inline-flex mb-4"><!---->
-                    <div class="v-avatar base-avatar__avatar primary"
-                         style="height: 56px; min-width: 56px; width: 56px;"><i aria-hidden="true"
-                                                                                class="v-icon notranslate mdi mdi-vuetify theme--dark"
-                                                                                dark="true"
-                                                                                style="font-size: 28px;"></i></div>
-                </div><!----><h1 class="text-uppercase text-h5 font-weight-bold mb-2 text-center"> About our
-                Product </h1>
-                <div class="v-responsive base-divider primary mx-auto mb-6" style="max-width: 28px;">
-                    <div class="v-responsive__content">
-                        <hr role="separator" aria-orientation="horizontal" class="v-divider theme--light">
-                    </div>
-                </div><!----></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-12">
-                        <div class="container pa-0">
-                            <div class="row no-gutters justify-start"><!---->
-                                <div class="col col-9">
-                                    <div class="text-body-2 font-weight-regular mb-1 text-left grey--text"> Best
-                                        Productivity
-                                    </div>
-                                    <h3 class="text-uppercase text-h6 font-weight-bold mb-1 text-left"> Grow your
-                                        Revenue </h3>
-                                    <div class="v-responsive base-divider primary mr-auto mb-6"
-                                         style="max-width: 28px;">
-                                        <div class="v-responsive__content">
-                                            <hr role="separator" aria-orientation="horizontal"
-                                                class="v-divider theme--light">
-                                        </div>
-                                    </div>
-                                    <p class="base-body text-body-1 grey--text text--darken-1 text-left mb-6">
-                                    <div>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut
-                                        dolorum fuga.harum quidem rerum facilis estexpedita distinctio.
-                                    </div>
-                                    </p></div>
-                                <div class="col col-2">
-                                    <div class="text-h2 grey--text text--lighten-4 font-weight-bold pr-8">01</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12">
-                        <div class="container pa-0">
-                            <div class="row no-gutters justify-start"><!---->
-                                <div class="col col-9">
-                                    <div class="text-body-2 font-weight-regular mb-1 text-left grey--text"> Special
-                                        Offers
-                                    </div>
-                                    <h3 class="text-uppercase text-h6 font-weight-bold mb-1 text-left"> Affordable
-                                        Prices </h3>
-                                    <div class="v-responsive base-divider primary mr-auto mb-6"
-                                         style="max-width: 28px;">
-                                        <div class="v-responsive__content">
-                                            <hr role="separator" aria-orientation="horizontal"
-                                                class="v-divider theme--light">
-                                        </div>
-                                    </div>
-                                    <p class="base-body text-body-1 grey--text text--darken-1 text-left mb-6">
-                                    <div>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut
-                                        dolorum fuga.harum quidem rerum facilis estexpedita distinctio.
-                                    </div>
-                                    </p></div>
-                                <div class="col col-2">
-                                    <div class="text-h2 grey--text text--lighten-4 font-weight-bold pr-8">02</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12">
-                        <div class="container pa-0">
-                            <div class="row no-gutters justify-start"><!---->
-                                <div class="col col-9">
-                                    <div class="text-body-2 font-weight-regular mb-1 text-left grey--text"> Income
-                                        Flow
-                                    </div>
-                                    <h3 class="text-uppercase text-h6 font-weight-bold mb-1 text-left"> Target
-                                        Setting </h3>
-                                    <div class="v-responsive base-divider primary mr-auto mb-6"
-                                         style="max-width: 28px;">
-                                        <div class="v-responsive__content">
-                                            <hr role="separator" aria-orientation="horizontal"
-                                                class="v-divider theme--light">
-                                        </div>
-                                    </div>
-                                    <p class="base-body text-body-1 grey--text text--darken-1 text-left mb-6">
-                                    <div>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut
-                                        dolorum fuga.harum quidem rerum facilis estexpedita distinctio.
-                                    </div>
-                                    </p></div>
-                                <div class="col col-2">
-                                    <div class="text-h2 grey--text text--lighten-4 font-weight-bold pr-8">03</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <section class="py-12">
+            <v-container>
+                <v-row class="align-center justify-center">
+                    <v-col class="px-10 col-md-6 col-12">
+                        <h1 class="font-weight-bold py-3 text-h6 text-lg-h5 font-weight-black mb-4 text-left">
+                            ¿QUIENES SOMOS?
+                        </h1>
+                        <p class="base-body body-1 offblack--text text--darken-1 text-left mb-10">
+                            Somos un grupo de jóvenes emprendedores y nos une el amor y pasión por la identidad cultural
+                            de
+                            nuestra tierra.
+                            <br>
+                            Alma Guajira nace de la necesidad de hacer un turismo más amigable y justo para todas las
+                            partes
+                            que interactúan en la actividad turística de nuestro departamento, somos guías de turismo,
+                            nativos, conductores, agentes de viajes, artesanos, cocineros, viajeros, somos una gran
+                            familia.
+                        </p>
+                    </v-col>
+                    <v-col class="col-md-6 col-12">
+                        <v-img :src="working" cover
+                               class="rounded-circle mx-auto"
+                               style="height: 300px; width: 300px; min-height: 300px; min-width: 300px;">
+                            <template v-slot:placeholder>
+                                <v-skeleton-loader
+                                    height="300px"
+                                    class="mx-auto fill-height"
+                                    type="image"
+                                ></v-skeleton-loader>
+                            </template>
+                        </v-img>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </section>
 
-        <div class="v-sheet theme--light rounded-0" id="we-help-your-success" style="padding: 96px 0px;">
-            <div class="base-section-heading text-center mb-12">
-                <div class="base-avatar d-inline-flex mb-4 base-avatar--outlined">
-                    <div class="v-avatar base-avatar__outline primary"
-                         style="height: 65.3333px; min-width: 65.3333px; width: 65.3333px; opacity: 0.4; margin: -4.66667px 0px 0px -4.66667px;"></div>
-                    <div class="v-avatar base-avatar__avatar primary"
-                         style="height: 56px; min-width: 56px; width: 56px;"><i aria-hidden="true"
-                                                                                class="v-icon notranslate mdi mdi-account-outline theme--dark"
-                                                                                dark="true"
-                                                                                style="font-size: 28px;"></i></div>
-                </div><!----><h1 class="text-uppercase text-h5 font-weight-bold mb-2 text-center"> We Help Your
-                Success </h1>
-                <div class="v-responsive base-divider primary mx-auto mb-6" style="max-width: 28px;">
-                    <div class="v-responsive__content">
-                        <hr role="separator" aria-orientation="horizontal" class="v-divider theme--light">
-                    </div>
-                </div>
-                <p class="base-body text-body-1 mx-auto grey--text text--darken-1 text-center mb-10"
-                   style="max-width: 700px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, in!
-                    Asperiores, impedit libero. Veniam rerum saepe unde nihil possimus quibusdam esse accusamus mollitia
-                    magni fuga. </p></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-6">
-                        <div class="v-image v-responsive theme--light" color="grey lighten-1" flat="" tile=""
-                             height="400" src="/img/team-1.6e84e065.jpg" style="height: 400px;">
-                            <div class="v-responsive__sizer" style="padding-bottom: 149.844%;"></div>
-                            <div class="v-image__image v-image__image--cover"
-                                 style="background-image: url(&quot;https://zero-theme-pro.vuetifyjs.com/img/team-1.6e84e065.jpg&quot;); background-position: center center;"></div>
-                            <div class="v-responsive__content" style="width: 640px;">
-                                <div class="v-overlay pa-4 v-overlay--absolute theme--dark" style="z-index: 5;">
-                                    <div class="v-overlay__scrim secondary" style="opacity: 0;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="v-image v-responsive theme--light" color="grey lighten-1" flat="" tile=""
-                             height="400" src="/img/team-2.a926cd80.jpg" style="height: 400px;">
-                            <div class="v-responsive__sizer" style="padding-bottom: 124.844%;"></div>
-                            <div class="v-image__image v-image__image--cover"
-                                 style="background-image: url(&quot;https://zero-theme-pro.vuetifyjs.com/img/team-2.a926cd80.jpg&quot;); background-position: center center;"></div>
-                            <div class="v-responsive__content" style="width: 640px;">
-                                <div class="v-overlay pa-4 v-overlay--absolute theme--dark" style="z-index: 5;">
-                                    <div class="v-overlay__scrim secondary" style="opacity: 0;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="v-image v-responsive theme--light" color="grey lighten-1" flat="" tile=""
-                             height="400" src="/img/team-3.fed3e4a5.jpg" style="height: 400px;">
-                            <div class="v-responsive__sizer" style="padding-bottom: 87.9688%;"></div>
-                            <div class="v-image__image v-image__image--cover"
-                                 style="background-image: url(&quot;https://zero-theme-pro.vuetifyjs.com/img/team-3.fed3e4a5.jpg&quot;); background-position: center center;"></div>
-                            <div class="v-responsive__content" style="width: 640px;">
-                                <div class="v-overlay pa-4 v-overlay--absolute theme--dark" style="z-index: 5;">
-                                    <div class="v-overlay__scrim secondary" style="opacity: 0;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="v-image v-responsive theme--light" color="grey lighten-1" flat="" tile=""
-                             height="400" src="/img/team-4.1a5bddf5.jpg" style="height: 400px;">
-                            <div class="v-responsive__sizer" style="padding-bottom: 125%;"></div>
-                            <div class="v-image__image v-image__image--cover"
-                                 style="background-image: url(&quot;https://zero-theme-pro.vuetifyjs.com/img/team-4.1a5bddf5.jpg&quot;); background-position: center center;"></div>
-                            <div class="v-responsive__content" style="width: 640px;">
-                                <div class="v-overlay pa-4 v-overlay--absolute theme--dark" style="z-index: 5;">
-                                    <div class="v-overlay__scrim secondary" style="opacity: 0;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <v-sheet class="secondary  rounded-0" style="padding: 48px 0px;">
+            <v-responsive class=" mx-auto" style="max-width: 1350px;">
+                <v-container fluid class="">
+                    <v-row>
+                        <v-col class="col-sm-6 col-12 pa-4">
+                            <v-container class="pa-0">
+                                <v-row class="no-gutters justify-center">
 
-        <div class="v-sheet theme--light rounded-0" id="theme-features" style="padding: 96px 0px;">
-            <div class="base-section-heading text-center mb-12"><!----><!----><h1
-                class="text-uppercase text-h5 font-weight-bold mb-2 text-center"> Theme Features </h1>
-                <div class="v-responsive base-divider primary mx-auto mb-6" style="max-width: 28px;">
-                    <div class="v-responsive__content">
-                        <hr role="separator" aria-orientation="horizontal" class="v-divider theme--light">
-                    </div>
-                </div>
-                <p class="base-body text-body-1 mx-auto grey--text text--darken-1 text-center mb-10"
-                   style="max-width: 700px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, in!
-                    Asperiores, impedit libero. Veniam rerum saepe unde nihil possimus quibusdam esse accusamus mollitia
-                    magni fuga. </p></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-12">
-                        <div class="pt-2 mb-8 d-flex">
-                            <div class="base-avatar d-inline-flex mb-3 align-self-start base-avatar--outlined">
-                                <div class="v-avatar base-avatar__outline grey lighten-4"
-                                     style="height: 84px; min-width: 84px; width: 84px; opacity: 0.4; margin: -6px 0px 0px -6px;"></div>
-                                <div class="v-avatar base-avatar__avatar white"
-                                     style="height: 72px; min-width: 72px; width: 72px;"><i aria-hidden="true"
-                                                                                            class="v-icon notranslate mdi mdi-fountain-pen-tip theme--light"
-                                                                                            style="font-size: 36px;"></i>
-                                </div>
-                            </div>
-                            <div class="ml-6"><h3 class="text-uppercase text-h6 font-weight-bold mb-3 text-left"> Pixel
-                                Perfect Design </h3>
-                                <p class="base-body text-body-1 mx-auto grey--text text--darken-1 text-left mb-0"
-                                   style="max-width: 700px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Veritatis illum veniam cum dolores ratione commodi beatae quas maxime, laboriosam
-                                    excepturi solut! </p></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="pt-2 mb-8 d-flex">
-                            <div class="base-avatar d-inline-flex mb-3 align-self-start base-avatar--outlined">
-                                <div class="v-avatar base-avatar__outline grey lighten-4"
-                                     style="height: 84px; min-width: 84px; width: 84px; opacity: 0.4; margin: -6px 0px 0px -6px;"></div>
-                                <div class="v-avatar base-avatar__avatar white"
-                                     style="height: 72px; min-width: 72px; width: 72px;"><i aria-hidden="true"
-                                                                                            class="v-icon notranslate mdi mdi-cellphone theme--light"
-                                                                                            style="font-size: 36px;"></i>
-                                </div>
-                            </div>
-                            <div class="ml-6"><h3 class="text-uppercase text-h6 font-weight-bold mb-3 text-left"> Retina
-                                Ready </h3>
-                                <p class="base-body text-body-1 mx-auto grey--text text--darken-1 text-left mb-0"
-                                   style="max-width: 700px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Veritatis illum veniam cum dolores ratione commodi beatae quas maxime, laboriosam
-                                    excepturi solut! </p></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="pt-2 mb-8 d-flex">
-                            <div class="base-avatar d-inline-flex mb-3 align-self-start base-avatar--outlined">
-                                <div class="v-avatar base-avatar__outline primary"
-                                     style="height: 84px; min-width: 84px; width: 84px; opacity: 0.4; margin: -6px 0px 0px -6px;"></div>
-                                <div class="v-avatar base-avatar__avatar primary"
-                                     style="height: 72px; min-width: 72px; width: 72px;"><i aria-hidden="true"
-                                                                                            class="v-icon notranslate mdi mdi-pencil-box-outline theme--dark"
-                                                                                            dark="true"
-                                                                                            style="font-size: 36px;"></i>
-                                </div>
-                            </div>
-                            <div class="ml-6"><h3 class="text-uppercase text-h6 font-weight-bold mb-3 text-left"> Easily
-                                Customizable </h3>
-                                <p class="base-body text-body-1 mx-auto grey--text text--darken-1 text-left mb-0"
-                                   style="max-width: 700px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Veritatis illum veniam cum dolores ratione commodi beatae quas maxime, laboriosam
-                                    excepturi solut! </p></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="pt-2 mb-8 d-flex">
-                            <div class="base-avatar d-inline-flex mb-3 align-self-start base-avatar--outlined">
-                                <div class="v-avatar base-avatar__outline grey lighten-4"
-                                     style="height: 84px; min-width: 84px; width: 84px; opacity: 0.4; margin: -6px 0px 0px -6px;"></div>
-                                <div class="v-avatar base-avatar__avatar white"
-                                     style="height: 72px; min-width: 72px; width: 72px;"><i aria-hidden="true"
-                                                                                            class="v-icon notranslate mdi mdi-image-size-select-actual theme--light"
-                                                                                            style="font-size: 36px;"></i>
-                                </div>
-                            </div>
-                            <div class="ml-6"><h3 class="text-uppercase text-h6 font-weight-bold mb-3 text-left"> Image
-                                Parallax </h3>
-                                <p class="base-body text-body-1 mx-auto grey--text text--darken-1 text-left mb-0"
-                                   style="max-width: 700px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Veritatis illum veniam cum dolores ratione commodi beatae quas maxime, laboriosam
-                                    excepturi solut! </p></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="pt-2 mb-8 d-flex">
-                            <div class="base-avatar d-inline-flex mb-3 align-self-start base-avatar--outlined">
-                                <div class="v-avatar base-avatar__outline grey lighten-4"
-                                     style="height: 84px; min-width: 84px; width: 84px; opacity: 0.4; margin: -6px 0px 0px -6px;"></div>
-                                <div class="v-avatar base-avatar__avatar white"
-                                     style="height: 72px; min-width: 72px; width: 72px;"><i aria-hidden="true"
-                                                                                            class="v-icon notranslate mdi mdi-ice-pop theme--light"
-                                                                                            style="font-size: 36px;"></i>
-                                </div>
-                            </div>
-                            <div class="ml-6"><h3 class="text-uppercase text-h6 font-weight-bold mb-3 text-left"> Seo
-                                Optimized </h3>
-                                <p class="base-body text-body-1 mx-auto grey--text text--darken-1 text-left mb-0"
-                                   style="max-width: 700px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Veritatis illum veniam cum dolores ratione commodi beatae quas maxime, laboriosam
-                                    excepturi solut! </p></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="pt-2 mb-8 d-flex">
-                            <div class="base-avatar d-inline-flex mb-3 align-self-start base-avatar--outlined">
-                                <div class="v-avatar base-avatar__outline grey lighten-4"
-                                     style="height: 84px; min-width: 84px; width: 84px; opacity: 0.4; margin: -6px 0px 0px -6px;"></div>
-                                <div class="v-avatar base-avatar__avatar white"
-                                     style="height: 72px; min-width: 72px; width: 72px;"><i aria-hidden="true"
-                                                                                            class="v-icon notranslate mdi mdi-help-circle-outline theme--light"
-                                                                                            style="font-size: 36px;"></i>
-                                </div>
-                            </div>
-                            <div class="ml-6"><h3 class="text-uppercase text-h6 font-weight-bold mb-3 text-left"> 24/7
-                                Support </h3>
-                                <p class="base-body text-body-1 mx-auto grey--text text--darken-1 text-left mb-0"
-                                   style="max-width: 700px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Veritatis illum veniam cum dolores ratione commodi beatae quas maxime, laboriosam
-                                    excepturi solut! </p></div>
-                        </div>
-                    </div>
-                </div>
+                                    <v-col class="col col-12">
+                                        <h3
+                                            class="text-uppercase text-h6 font-weight-bold mb-1 text-center white--text">
+                                            MISION
+                                        </h3>
+                                        <v-divider dark class="primary mx-auto mb-6"
+                                                   style="max-width: 28px;"/>
+
+                                        <p class="text-body-1 grey--text text--lighten-1 text-center mb-6 text-justify">
+                                            Alma guajira es una empresa con enfoque social nuestro objetivo principal es
+                                            crear experiencias memorables en nuestro viajero fomentando relaciones sanas
+                                            entre lugareños patrimonio natural y cultural y visitantes trabajamos
+                                            cuidadosamente bajo la premisa de responsabilidad capacitación constante
+                                            comercio justo y turismo inclusivo lo que significa que retribuimos a cada
+                                            comunidad y dejamos un impacto positivo en cada lugar que visiten nuestros
+                                            viajeros.
+                                        </p>
+                                    </v-col>
+                                </v-row>
+                            </v-container>
+                        </v-col>
+                        <v-col class="col-sm-6 col-12 pa-4">
+                            <v-container class="pa-0">
+                                <v-row class="no-gutters ">
+                                    <v-col class="col col-12">
+                                        <h3
+                                            class="text-uppercase text-h6 font-weight-bold mb-1 text-center white--text">
+                                            VISION
+                                        </h3>
+                                        <v-divider dark class="primary mx-auto mb-6"
+                                                   style="max-width: 28px;"/>
+
+                                        <p class="text-body-1 grey--text text--lighten-1 text-center mb-6 text-justify">
+                                            Seremos al mediano plazo una empresa consolidada en nuestro departamento y
+                                            marcar un antes y después en la industria del turismo en la guajira que
+                                            seamos reconocidos por nuestros altos estándares de profesionalidad y
+                                            responsabilidad social.
+                                            <br>
+
+                                            "Nunca perdamos de vista nuestro objetivo de hacer un turismo distinto más
+                                            amigable con las comunidades locales"
+
+                                        </p>
+                                    </v-col>
+                                </v-row>
+                            </v-container>
+                        </v-col>
+
+                    </v-row>
+                </v-container>
+
+            </v-responsive>
+        </v-sheet>
+
+        <team-component class="mb-12"></team-component>
+
+        <v-sheet class=" theme--light">
+            <v-container class=" py-4 py-lg-8">
+                <v-row>
+                    <v-col class="col-md-4 col-12 fill-height">
+                        <h2 class="text-h6 text-lg-h5 secondary--text font-weight-black text-uppercase">
+                            NUESTROS VIAJEROS NOS RECOMIENDAN
+                        </h2>
+                        <v-divider class="primary  mb-6" style="max-width: 28px;"></v-divider>
+                    </v-col>
+                    <v-col class="pa-md-0 col-md-8 col-12">
+                        <v-row>
+
+                            <v-col v-for="item in imgsTestimonios" :key="item.id"
+                                   class="col-sm-6 col-12">
+                                <v-sheet class=" theme--light surface">
+                                    <img :src="item"/>
+                                </v-sheet>
+                            </v-col>
+                        </v-row>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-sheet>
+
+        <v-sheet class="rounded-0">
+            <div class="text-center mb-6">
+                <h2 class="text-h6 text-lg-h5 secondary--text font-weight-black text-uppercase">
+                    BUENAS PRACTICAS
+                </h2>
+                <v-divider class="primary mx-auto mb-6" style="max-width: 28px;"></v-divider>
             </div>
-        </div>
+
+            <v-container>
+                <v-row>
+                    <v-col class="col-md-6 col-12">
+                        <v-container class="pa-0">
+                            <v-row class="no-gutters justify-start">
+                                <v-col cols="12" class="col-sm-2">
+                                    <div class="text-h2 success--text font-weight-bold pr-8">
+                                        01
+                                    </div>
+                                </v-col>
+                                <v-col cols="12" class="col-sm-9">
+                                    <div class="text-body-2 font-weight-regular mb-1 text-left grey--text">
+                                        backed up
+                                    </div>
+                                    <h3 class="text-uppercase text-h6 font-weight-bold mb-1 text-left">
+                                        Respaldo
+                                    </h3>
+
+                                    <v-divider class="primary mr-auto mb-6"
+                                               style="max-width: 28px;">
+                                    </v-divider>
+                                    <p class="base-body text-body-1 grey--text text--darken-1 text-left mb-6">
+                                        Estás respaldado por la asistencia al viajero de Colasistencia.
+                                    </p>
+                                    <div class="my-1">
+                                        <div class="v-sheet mx-auto surface">
+                                            <img
+                                                :src="imgsBuenasPracticas[4]"/>
+                                        </div>
+                                    </div>
+                                </v-col>
+
+                            </v-row>
+                        </v-container>
+                    </v-col>
+                    <v-col class="col-md-6 col-12">
+                        <v-container>
+                            <v-row class="no-gutters justify-start">
+                                <v-col cols="12" class="col-sm-2 ">
+                                    <div class="text-h2 success--text font-weight-bold pr-8 ">
+                                        02
+                                    </div>
+                                </v-col>
+                                <v-col cols="12" class="col col-sm-9 ">
+                                    <div class="text-body-2 font-weight-regular mb-1 text-left grey--text">
+                                        training
+                                    </div>
+                                    <h3 class="text-uppercase text-h6 font-weight-bold mb-1 text-left">
+                                        Capacitaciones
+                                    </h3>
+
+                                    <v-divider class="primary mr-auto mb-6"
+                                               style="max-width: 28px;">
+                                    </v-divider>
+                                    <p class="base-body text-body-1 grey--text text--darken-1 text-left mb-6">
+                                        Nos capacitamos constantemente.
+                                    </p>
+
+                                    <div class="my-4">
+                                        <v-row dense>
+                                            <v-col v-for="item in imgsBuenasPracticas.slice(0,4)" :key="item.id"
+                                                   class="col-sm-6 col-md-3 col-12 mx-auto">
+                                                <v-sheet class="theme--light surface mx-auto">
+                                                    <img class="mx-auto"
+                                                        :src="item"/>
+                                                </v-sheet>
+                                            </v-col>
+                                        </v-row>
+                                    </div>
+                                </v-col>
+
+                            </v-row>
+                        </v-container>
+                    </v-col>
+
+                </v-row>
+            </v-container>
+        </v-sheet>
     </app-layout>
 </template>
 
 <script>
 import AppLayout from "@/Layouts/AppLayout";
+import bg from '@/../images/bg/bg2.jpg'
+import working from '@/../images/working.jpeg'
+import TeamComponent from '@/components/TeamComponent.vue'
+
+import bp1 from '../../images/buenas_practicas/buenas-practicas1.png'
+import bp2 from '../../images/buenas_practicas/buenas-practicas2.png'
+import bp3 from '../../images/buenas_practicas/buenas-practicas3.png'
+import bp4 from '../../images/buenas_practicas/buenas-practicas4.png'
+import bp5 from '../../images/buenas_practicas/buenas-practicas5.png'
+
+import t1 from '../../images/testimonios/testimonio1.png'
+import t2 from '../../images/testimonios/testimonio2.png'
+import t3 from '../../images/testimonios/testimonio3.png'
+import t4 from '../../images/testimonios/testimonio4.png'
 
 export default {
     components: {
-        AppLayout
-    }
+        AppLayout,
+        "team-component": TeamComponent
+    },
+    data: () => ({
+        bg,
+        working,
+        items: [
+            {
+                text: 'INICIO',
+                disabled: false,
+                href: '/',
+            },
+            {
+                text: 'NOSOTROS',
+                disabled: true,
+                href: '/about-us',
+            },
+        ],
+        imgsBuenasPracticas: [bp1, bp2, bp3, bp4, bp5],
+        imgsTestimonios: [t1, t2, t3, t4]
+    })
 };
 </script>
+
 <style>
+.theme--light.v-breadcrumbs .v-breadcrumbs__divider, .theme--light.v-breadcrumbs .v-breadcrumbs__item--disabled {
+    color: white !important;
+}
+
+.v-skeleton-loader__image {
+    height: 300px;
+}
 </style>

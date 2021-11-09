@@ -1,14 +1,14 @@
 <template>
     <div class="mb-1">
         <v-expand-transition>
-            <v-system-bar color="primary" absolute v-if="$vuetify.breakpoint.smAndUp &&flat"
+            <v-system-bar color="primary" absolute v-show="$vuetify.breakpoint.smAndUp && flat"
                           :class="$vuetify.breakpoint.mdAndUp?'px-200':'px-6'"
                           height="30">
                 <v-spacer></v-spacer>
 
                 <div class="d-flex justify-center align-center white--text">
                     <v-btn icon text rounded href="tel:+57 320 5011419">
-                        <v-img notranslate height="20" width="20" contain :src="tel" class="mr-1"></v-img>
+                        <v-img height="20" width="20" contain :src="tel" class="mr-1"></v-img>
                     </v-btn>
                     <span>Call us: <span class="font-weight-bold">+57 320 5011419</span></span>
                 </div>
@@ -242,13 +242,15 @@
             ></v-app-bar-nav-icon>
 
             <template v-if="$vuetify.breakpoint.mdAndUp && showExtendTolbar"
-                      v-slot:extension>
-                <v-expand-x-transition>
+                      v-slot:extension transition="scale-transition">
+                <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
                     <v-container v-if="$vuetify.breakpoint.mdAndUp && showExtendTolbar"
-                                 class="py-0 d-none d-md-block fill-height">
+                                 class="py-0 d-none d-md-block fill-height" transition="scale-transition"
+                                 style=" transition: all 0.2s;">
                         <v-divider color="white"></v-divider>
 
                         <v-toolbar-items
+                            transition="scale-transition"
                             class="d-flex fill-height justify-center justify-space-arrow  text-body-2 text-lg-body-1"
                         >
 
@@ -262,7 +264,7 @@
 
                         </v-toolbar-items>
                     </v-container>
-                </v-expand-x-transition>
+                </transition>
             </template>
 
         </v-app-bar>
@@ -393,7 +395,7 @@ export default {
             if (top > 50) {
                 this.fab = true;
                 this.flat = false;
-               // console.log(top)
+                // console.log(top)
                 if (top > this.topAnterior) {
                     this.topAnterior = top;
                     this.showExtendTolbar = false;
@@ -450,5 +452,6 @@ export default {
 {
     opacity: 0
 }
+
 </style>
 

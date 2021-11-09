@@ -5,13 +5,13 @@
                 <div class="text-uppercase overline primary--text mb-2">
                     Trabajando con nosotros
                 </div>
-                <h1 class="text-h5 font-weight-bold mb-2 text-center">
+                <h1 class="text-h6 text-lg-h5 text-uppercase font-weight-black mb-2 text-center">
                     Nuestro equipo
                 </h1>
                 <v-divider class="primary mx-auto mb-2" style="max-width: 28px;"></v-divider>
                 <v-responsive class="mx-auto" style="max-width: 1200px;">
                     <div class="v-responsive__content">
-                        <p class="mt-4">
+                        <p class="mt-4 example-text">
                             AlmaGuajira no es una empresa de una sola persona. Contamos con un equipo muy activo y
                             comprometido que se esfuerza constantemente por brindar a los turistas y aventuresros una
                             mejor
@@ -34,10 +34,23 @@
                             <v-avatar size="220">
                                 <v-img cover
                                        :src="item.image">
+                                    <template v-slot:placeholder>
+                                        <v-row
+                                            class="fill-height ma-0"
+                                            align="center"
+                                            justify="center"
+                                        >
+                                            <v-progress-circular
+                                                indeterminate
+                                                color="primary"
+                                            ></v-progress-circular>
+                                        </v-row>
+
+                                    </template>
                                 </v-img>
                             </v-avatar>
-                            <div class="text-h5 mt-3">{{ item.name }}</div>
-                            <div class="text-h6 secondary--text">{{ item.ocupation }}</div>
+                            <div class="text-h5 mt-3 example-text" style="font-family: 'Montserrat', sans-serif !important;">{{ item.name }}</div>
+                            <div class="text-h6 secondary--text example-text" style="font-family: 'Montserrat', sans-serif !important;">{{ item.ocupation }}</div>
 
                         </div>
 

@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import bg from '@/../images/bg.jpg'
+import bg from '@/../images/bg/bg1.jpg'
 import logo from '@/../images/logo.png'
 
 export default {
