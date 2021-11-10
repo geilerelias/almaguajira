@@ -1,20 +1,20 @@
 <template>
     <div class="mb-1">
-        <v-expand-transition>
-            <v-system-bar color="primary" absolute v-show="$vuetify.breakpoint.smAndUp && flat"
-                          :class="$vuetify.breakpoint.mdAndUp?'px-200':'px-6'"
-                          height="30">
-                <v-spacer></v-spacer>
+        <v-system-bar color="primary" absolute v-show="$vuetify.breakpoint.smAndUp && flat"
+                      :class="$vuetify.breakpoint.mdAndUp?'px-200':'px-6'"
+                      height="30">
+            <v-spacer></v-spacer>
 
-                <div class="d-flex justify-center align-center white--text">
-                    <v-btn icon text rounded href="tel:+57 320 5011419">
-                        <v-img height="20" width="20" contain :src="tel" class="mr-1"></v-img>
-                    </v-btn>
-                    <span>Call us: <span class="font-weight-bold">+57 320 5011419</span></span>
-                </div>
+            <div class="d-flex justify-center align-center white--text">
+                <v-btn icon text rounded href="tel:+57 320 5011419">
+                    <v-icon class="light-green--text">
+                        mdi-phone-in-talk
+                    </v-icon>
+                </v-btn>
+                <span>Call us: <span class="font-weight-bold">+57 320 5011419</span></span>
+            </div>
 
-            </v-system-bar>
-        </v-expand-transition>
+        </v-system-bar>
         <v-app-bar
             :extended="$vuetify.breakpoint.mdAndUp && flat"
             :absolute="$vuetify.breakpoint.mdAndUp && flat"
@@ -242,29 +242,30 @@
             ></v-app-bar-nav-icon>
 
             <template v-if="$vuetify.breakpoint.mdAndUp && showExtendTolbar"
-                      v-slot:extension transition="scale-transition">
-                <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-                    <v-container v-if="$vuetify.breakpoint.mdAndUp && showExtendTolbar"
-                                 class="py-0 d-none d-md-block fill-height" transition="scale-transition"
-                                 style=" transition: all 0.2s;">
-                        <v-divider color="white"></v-divider>
+                      v-slot:extension>
 
-                        <v-toolbar-items
-                            transition="scale-transition"
-                            class="d-flex fill-height justify-center justify-space-arrow  text-body-2 text-lg-body-1"
+                <v-container v-if="$vuetify.breakpoint.mdAndUp && showExtendTolbar"
+                             class="py-0 d-none d-md-block fill-height"
+                             transition="scale-transition"
+                             style=" transition: all 0.2s;">
+                    <v-divider color="white"></v-divider>
+
+                    <v-toolbar-items
+                        transition="scale-transition"
+                        class="d-flex fill-height justify-center justify-space-arrow  text-body-2 text-lg-body-1"
+                    >
+
+                        <inertia-link v-for="item in links" :key="item.name"
+                                      :href="route(item.route)"
+                                      class="text-none  v-btn v-btn--text theme--light v-size--default"
+                                      :class="{ 'active primary--text  font-weight-bold': route().current(item.route) && $vuetify.breakpoint.mdAndUp}"
                         >
+                            {{ item.title }}
+                        </inertia-link>
 
-                            <inertia-link v-for="item in links" :key="item.name"
-                                          :href="route(item.route)"
-                                          class="text-none  v-btn v-btn--text theme--light v-size--default"
-                                          :class="{ 'active primary--text  font-weight-bold': route().current(item.route) && $vuetify.breakpoint.mdAndUp}"
-                            >
-                                {{ item.title }}
-                            </inertia-link>
+                    </v-toolbar-items>
+                </v-container>
 
-                        </v-toolbar-items>
-                    </v-container>
-                </transition>
             </template>
 
         </v-app-bar>

@@ -2,7 +2,7 @@
     <div class="lb" v-if="items.length>0">
         <div :aspect-ratio="16/9" class="lb-grid"
              :class="[css,items.length>cells?'lb-grid-' + cells: 'lb-grid-' + items.length]">
-            <v-img class="lb-item"
+            <v-img class="lb-item "
                    transition="fab-transition"
                    v-for="(src, i) in items" :key="src.id"
                    @click="show(i)"
@@ -24,8 +24,8 @@
             </v-img>
         </div>
 
-        <transition  enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-            <div class="lb-modal" v-if="index>=0">
+        <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+            <div class="lb-modal" v-show="index>=0">
                 <v-btn
                     @click="close"
                     icon
@@ -58,7 +58,11 @@
                 </v-btn>
 
                 <div class="lb-modal-img d-flex justify-center align-center" @click="close">
-                    <v-img contain :src="src" class="mx-auto"
+                    <v-img contain :src="src"
+                           class="mx-auto parallax-slider"
+                           :class="changing?'transitioning-src':''"
+                           @loadstart="addTransition"
+                           @load="removeTransition"
                            style="position: absolute; height: 100vh !important;width: 100vw !important;"/>
 
                     <div class="spinner spinner-dots-wave" v-if="loading">
@@ -108,6 +112,7 @@ export default {
 
     data() {
         return {
+            changing: true,
             src: '',
             index: -1,
             loading: false,
@@ -169,8 +174,16 @@ export default {
         },
         bg(i) {
             return i && i.length > 0 ? `background-image: url('${i}');` : '';
-        }
+        },
 
+        addTransition() {
+            console.log("add  transiscion");
+            this.changing = true;
+        },
+        removeTransition() {
+            console.log("removiendo  transiscion")
+            this.changing = false;
+        }
     },
 
 
@@ -2333,6 +2346,24 @@ export default {
 
     .h-xxl-full {
         height: 100% !important
+    }
+
+    .parallax-slider {
+        transition: opacity 0.4s ease-in;
+        -webkit-transition: opacity 0.4s ease-in;
+        -moz-transition: opacity 0.4s ease-in;
+        -ms-transition: opacity 0.4s ease-in;
+        -o-transition: opacity 0.4s ease-in;
+        opacity: 1;
+    }
+
+    .transitioning-src {
+        transition: opacity 0.4s ease-out;
+        -webkit-transition: opacity 0.4s ease-out;
+        -moz-transition: opacity 0.4s ease-out;
+        -ms-transition: opacity 0.4s ease-out;
+        -o-transition: opacity 0.4s ease-out;
+        opacity: 0;
     }
 }
 

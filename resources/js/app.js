@@ -12,10 +12,10 @@ import vuetify from '../plugins/vuetify'
 import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
 
 //inertia
-import { InertiaApp } from '@inertiajs/inertia-vue';
-import { InertiaProgress } from '@inertiajs/progress'
+import {InertiaApp} from '@inertiajs/inertia-vue';
+import {InertiaProgress} from '@inertiajs/progress'
 
-import { InertiaForm } from 'laravel-jetstream';
+import {InertiaForm} from 'laravel-jetstream';
 import PortalVue from 'portal-vue';
 
 
@@ -39,7 +39,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 Vue.use(VAnimateCss);
 Vue.use(VueSweetalert2);
-Vue.mixin({ methods: { route } });
+Vue.mixin({methods: {route}});
 Vue.use(InertiaApp);
 Vue.use(InertiaForm);
 Vue.use(PortalVue);
@@ -55,7 +55,7 @@ new Vue({
         h(InertiaApp, {
             props: {
                 initialPage: JSON.parse(app.dataset.page),
-                resolveComponent: (name) => require(`./Pages/${ name }`).default,
+                resolveComponent: (name) => require(`./Pages/${name}`).default,
             },
         }),
 }).$mount(app);
@@ -70,4 +70,10 @@ InertiaProgress.init({
     includeCSS: true,
     // Whether the NProgress spinner will be shown.
     showSpinner: true,
+    cargando: () => ({
+        mensaje
+    })
 });
+function mensaje() {
+    alert('hola mundo')
+}

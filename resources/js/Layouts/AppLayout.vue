@@ -1,6 +1,5 @@
 <template>
     <v-app>
-
         <div class="min-h-screen">
             <!-- Page Drawer-->
             <drawer-component></drawer-component>
