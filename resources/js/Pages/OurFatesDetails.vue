@@ -4,7 +4,7 @@
         <!--            https://wa.me/c/573205011419-->
         <!--        </inertia-link>-->
 
-        <v-container class="fill-height" style="min-height: 90vh;">
+        <v-container style="min-height: 100vh;">
             <v-breadcrumbs class="text--primary px-0"
                            :items="items"
                            divider=">"
@@ -13,78 +13,99 @@
 
             <v-row dense>
                 <v-col class="col-12">
-                    <lightbox :items="images" :cells="4"></lightbox>
+                    <lightbox :items="images" :cells="4" style></lightbox>
                 </v-col>
 
-                <v-col class="mt-4 col col-12">
-                    <div class="d-flex justify-space-between flex-wrap align-center mb-3">
-                        <h1 class="me-2">
-                            Starbucks
+                <v-col v-if="exists" class="mt-4 col col-12">
+                    <div class="mb-3">
+                        <h1 class="secondary--text text-h6 text-lg-h5 text-uppercase font-weight-black mb-2">
+                            {{ destinos[id - 1].title }}
                         </h1>
-                        <div class="mb-3">
-                            <span>
-                                <i aria-hidden="true"
-                                   class="v-icon notranslate mdi mdi-star theme--light warning--text"
-                                   style="font-size: 16px;">
+                        <v-divider class="primary mb-2" style="max-width: 28px;"></v-divider>
+                    </div>
+                    <h1 class="secondary--text text-uppercase font-weight-black mb-2">
+                        Descripción
+                    </h1>
+                    <p class="mb-5 text-14" v-html="destinos[id-1].description">
+                    </p>
 
-                                </i></span>
-                            <span>
-                                <i aria-hidden="true"
-                                   class="v-icon notranslate mdi mdi-star theme--light warning--text"
-                                   style="font-size: 16px;"></i>
-                            </span>
-                            <span>
-                                <i aria-hidden="true"
-                                   class="v-icon notranslate mdi mdi-star theme--light warning--text"
-                                   style="font-size: 16px;"></i>
-                            </span>
-                            <span>
-                                <i aria-hidden="true"
-                                   class="v-icon notranslate mdi mdi-star theme--light warning--text"
-                                   style="font-size: 16px;"></i>
-                            </span>
-                            <span>
-                                <i aria-hidden="true" class="v-icon notranslate mdi mdi-star theme--light warning--text"
-                                   style="font-size: 16px;"></i>
-                            </span>
-                            <span class="text-14 me-1"> 4.5
-                                <span class="grey--text">(1004) </span>
-                            </span>
+
+                    <div v-if='destinos[id - 1].horarios!==""'>
+                        <div class="secondary--text  mb-4 d-flex align-center flex-wrap font-bold">
+                            Horario
                         </div>
+                        <p v-html="destinos[id - 1].horarios">
+                        </p>
                     </div>
-                    <p class="mb-5 text-14">Coffee, signature roasts, light bite, quick bite, fast foods</p>
+                    <div v-if='destinos[id - 1].tiempo!==""'>
+                        <div class="secondary--text  mb-4 d-flex align-center flex-wrap font-bold">
+                            <v-icon left
+                                    class="secondary--text"
+                                    size="16">
+                                mdi-clock-outline
+                            </v-icon>
+                            Tiempo
+                        </div>
+                        <p v-html="destinos[id - 1].tiempo">
+                        </p>
+                    </div>
+                    <div v-if='destinos[id - 1].punto_encuentro!==""'>
+                        <div class="secondary--text  mb-4 d-flex align-center flex-wrap font-bold">
+                            Punto de encuentro
+                        </div>
+                        <p v-html="destinos[id - 1].punto_encuentro">
+                        </p>
+                    </div>
+                    <div v-if='destinos[id - 1].incluye!==""'>
+                        <div class="secondary--text  mb-4 d-flex align-center flex-wrap font-bold">
 
-                    <div class="grey--text text--darken-1 align-middle text-14 mb-4 d-flex align-center flex-wrap">
-                        <v-icon class=" notranslate v-icon--left mdi mdi-map-marker theme--light grey--text"
-                                style="font-size: 16px;"></v-icon>
-                        The Dorothy Ross Friedman Residence, NY, US -
-                        <a href="/resturant/FoodMenu" aria-current="page"
-                           class="grey--text text--darken-3 nuxt-link-exact-active nuxt-link-active">Show Map</a></div>
-                    <div class="grey--text text--darken-1 align-middle text-14 mb-4 d-flex align-center flex-wrap"><i
-                        aria-hidden="true"
-                        class="v-icon notranslate v-icon--left mdi mdi-clock-outline theme--light grey--text"
-                        style="font-size: 16px;"></i> <span class="primary--text me-2">Open Now</span> - Sun - Mon: 9am
-                        -
-                        10pm
+                            Incluye
+                        </div>
+                        <p v-html="destinos[id - 1].incluye">
+
+                        </p>
                     </div>
-                    <div class="grey--text text--darken-1 align-middle text-14 mb-4 d-flex align-center flex-wrap"><i
-                        aria-hidden="true" class="v-icon notranslate v-icon--left mdi mdi-earth theme--light grey--text"
-                        style="font-size: 16px;"></i> <a href="/resturant/FoodMenu" aria-current="page"
-                                                         class="text-decoration-none grey--text text--darken-1 nuxt-link-exact-active nuxt-link-active">www.starbucks.com</a>
+                    <div v-if='destinos[id - 1].que_conoceras!==""'>
+                        <div class="secondary--text  mb-4 d-flex align-center flex-wrap font-bold">
+
+                            ¿Que conoceras?
+                        </div>
+                        <p v-html="destinos[id - 1].que_conoceras"></p>
                     </div>
+                    <div v-if='destinos[id - 1].recomendaciones!==""'>
+                        <div class="secondary--text  mb-4 d-flex align-center flex-wrap font-bold">
+                            Recomendaciones
+                        </div>
+                        <p v-html="destinos[id - 1].recomendaciones"></p>
+                    </div>
+                    <div v-if='destinos[id - 1].notas!==""'>
+                        <div class="secondary--text  mb-4 d-flex align-center flex-wrap font-bold">
+
+                            Notas
+                        </div>
+                        <p v-html="destinos[id - 1].notas"></p>
+                    </div>
+                    <v-row class="mb-12">
+                        <v-col>
+                            <v-btn
+                                color="primary"
+                                outlined
+                                dark
+                                @click="dialog=!dialog"
+                            >
+                                CLAUSULA DE RESPONSABILIDAD
+                            </v-btn>
+                        </v-col>
+                    </v-row>
+                </v-col>
+
+                <v-col v-else>
+
                 </v-col>
             </v-row>
-            <v-btn
-                color="primary"
-                outline
-                dark
-                @click="dialog=!dialog"
-            >
-                CLAUSULA DE RESPONSABILIDAD
-            </v-btn>
+
+
         </v-container>
-
-
         <v-row justify="center">
             <v-dialog
                 v-model="dialog"
@@ -99,10 +120,12 @@
                         amparada por el régimen de responsabilidad que establece la Ley 300 de 1996, el Decreto 2438 de
                         2010 y demás decretos reglamentarios.
                         <br>
+                        <br>
                         ALMA GUAJIRA, en su calidad de Intermediario tiene responsabilidad limitada en la prestación de
                         los servicios turísticos de los proveedores (hoteles, transportes, guías, parques, museos entre
                         otros), así mismo, no tiene injerencia en las decisiones o políticas de estos. Por otra parte,
                         se responsabiliza del cumplimiento de los servicios mencionados en los programas.
+                        <br>
                         <br>
                         ALMA GUAJIRA, no asume responsabilidad frente al usuario o viajero por eventos tales como
                         accidentes, huelgas, asonadas, terremotos, fenómenos climáticos o naturales, condiciones de
@@ -113,12 +136,14 @@
                         hoteles, servicios opcionales, lo cual es aceptado por el pasajero al momento de adquirir los
                         servicios.
                         <br>
+                        <br>
                         En caso de ser necesario la cancelación de un viaje total o parcialmente la responsabilidad de
                         los organizadores se limita a reintegrar el importe de la parte cancelada, descontando los
                         gastos a que hubiere lugar.
                         El Organizador del viaje tiene la prerrogativa de modificar el itinerario o los hoteles
                         confirmados y demás servicios, por otros de igual o superior categoría cuando dichos cambios
                         redunden en beneficio de la calidad del viaje.
+                        <br>
                         <br>
                         En el evento que el usuario por fuerza mayor se vea obligado a suspender los servicios
                         turísticos contratados, tendrá derecho al reintegro de los servicios no disfrutados,
@@ -127,13 +152,16 @@
                         de su responsabilidad, el fallecimiento, enfermedad grave o accidente del asegurado, cónyuge,
                         hijos, padres o hermanos.
                         <br>
+                        <br>
                         De no tomar lo servicios contratados sin causa no justificada, no tendrá derecho a devolución
                         alguna de la cantidad abonada, salvo acuerdo entre las partes en otro sentido.
+                        <br>
                         <br>
                         En caso de que el usuario del programa contratado no pueda viajar en la fecha reservada puede
                         coordinar una nueva fecha de viaje asumiendo los costos que esto signifique por penalización
                         según la antelación con que sea reportada la novedad, o podrá ceder su reserva a una tercera
                         persona, solicitándolo por escrito con quince días de antelación a la fecha de viaje
+                        <br>
                         <br>
                         La agencia de viajes informará al viajero la documentación requerida para realizar el viaje,
                         pero es responsabilidad del usuario, el cumplimiento de los requisitos informados por la
@@ -142,13 +170,16 @@
                         realizar el viaje o, en el caso, que no se le permita el ingreso a algún país. Serán por cuenta
                         del usuario los gastos que esta situación le origine.
                         <br>
+                        <br>
                         Los organizadores de los servicios turísticos se reservan el derecho de retirar de estos a quién
                         por causa grave, debidamente comprobada, ya sea de carácter moral o disciplinario, atente contra
                         el éxito de esta.
                         <br>
+                        <br>
                         En relación con los servicios no prestados al momento del retiro del usuario, se aplicarán las
                         políticas de reembolso del operador, si hubiere lugar. ALMA GUAJIRA. Con RNT No 99350 no es
                         solidario ni responsable por dichos reembolsos.
+                        <br>
                         <br>
                         Las políticas de reembolso de los servicios no prestados en razón a situaciones de fuerza mayor
                         serán definidas por cada operador y las mismas serán confirmadas una vez se reserven y expidan
@@ -158,9 +189,11 @@
                         tiempo por causas ajenas a ALMA GUAJIRA, esta no reconocerá ningún interés sobre las sumas a
                         reembolsar.
                         <br>
+                        <br>
                         El porcentaje de reembolso dependerá de las condiciones del proveedor y de los gastos de
                         administración de la agencia. Así mismo en las condiciones específicas de cada plan se definirá
                         la forma de pago del plan y los parámetros del reembolso a que hubiere lugar.
+                        <br>
                         <br>
                         El organizador de los servicios turísticos y la agencia de viajes no asumen responsabilidad
                         alguna frente a los asuntos legales u otros inconvenientes en que pueda verse involucrado el
@@ -170,11 +203,13 @@
                         que sufra el equipaje o los efectos personales del Usuario durante el viaje. El equipaje y
                         cualquier otro objeto que los usuarios lleven consigo están bajo su custodia y responsabilidad.
                         <br>
+                        <br>
                         Todos los precios publicados y tarifas presentadas en este boletín, recibo, comprobante o
                         cotización están sujetos a cambio y disponibilidad sin previo aviso. Aplican restricciones y
                         condiciones para cada tarifa publicada según su vigencia. Las tarifas hoteleras dependen de la
                         acomodación seleccionada y categoría de este.
 
+                        <br>
                         <br>
                         ALMA GUAJIRA Con RNT No 99350 le informará al pasajero las restricciones que establezcan las
                         aerolíneas en cuanto a prohibiciones, peso máximo y número de piezas por pasajero, personas o
@@ -184,6 +219,7 @@
                         el evento de existir en el mercado alguna póliza individual en materia de equipajes, ALMA
                         GUAJIRA Con RNT No 99350 se la podrá referenciar al pasajero para que éste decida si lo toma o
                         no.
+                        <br>
                         <br>
                         Si el usuario desiste de viajar se le reintegrarán las sumas abonadas al precio del programa
                         debitando el porcentaje que a continuación se indica, calculado sobre el precio total del
@@ -196,18 +232,18 @@
                             <li>● Menos de 7 días antes de la salida = 100% de gastos.</li>
                         </ul>
                         <br>
+                        <br>
                         <span class="font-weight-bold">Nota:</span> Para servicios turísticos específicos, algunos
                         destinos eco turísticos y eventos
                         especiales aplicarán las condiciones de cada caso que serán informadas a la confirmación de los
                         servicios.
+                        <br>
                         <br>
                         ALMA GUAJIRA con registro Nacional de Turismo No. 99350 expedido por el Ministerio de Comercio,
                         Industria y Turismo. En cumplimiento de lo dispuesto en el artículo 17 de la Ley 679 de 2001, la
                         Ley 1329 de 2009, la Ley 1336 de 2009, advierte al turista que la trata, explotación y el abuso
                         sexual de menores de edad en el país son sancionados penal y administrativamente, conforme a las
                         leyes vigentes. Y que apoyamos las disposiciones del gobierno nacional en tal sentido.
-
-
                     </v-card-text>
                     <v-card-actions>
                         <v-spacer></v-spacer>
@@ -259,13 +295,16 @@ export default {
         var num = this.id - 1;
         console.log(this.destinos[num].name);
         let folder = this.destinos[num].name;
-        if (folder !== null) {
+        this.images.push(`/src/destinos/null/Imagen${num + 1}.jpg`)
+        if (folder !== null || this.destinos[num].name !== '') {
+            this.exists = true;
+
             axios
                 .get(`/destinos/${folder}`)
                 .then(response => {
                     console.log(response)
                     let lista = response.data;
-                    this.images.push(`/src/destinos/null/Imagen${num + 1}.jpg`)
+
                     for (let i = 0; i < lista.length; i++) {
                         this.images.push(`/src/destinos/${folder}/${lista[i]}`);
                         console.log(`/src/services/${folder}/${lista[i]}`)
@@ -275,10 +314,12 @@ export default {
                     console.log(error);
                 });
         } else {
+            this.exists = false
             console.log('el folder no contiene información')
         }
     },
     data: () => ({
+        exists: false,
         dialog: false,
         bg,
         items: [
@@ -326,7 +367,7 @@ export default {
                 <ul>
                     <li>Servicio de guía profesional de turismo.</li>
                     <li>Póliza de Seguro.</li>
-                </ul>>
+                </ul>
                 `,
                 que_conoceras: `
                 <ul>
@@ -342,7 +383,8 @@ export default {
                     <li>Monumento de las mariposas amarillas.</li>
                 </ul>
                 `,
-                notas: 'Las reservas se realizan con mínimo 24 horas de anticipación.'
+                notas: 'Las reservas se realizan con mínimo 24 horas de anticipación.',
+                recomendaciones: ''
 
             },
             {
