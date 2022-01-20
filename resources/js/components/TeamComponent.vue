@@ -10,12 +10,6 @@
                 </h1>
                 <v-divider class="primary mx-auto mb-2" style="max-width: 28px;"></v-divider>
                 <v-responsive class="mx-auto mt-4" style="max-width: 1200px;">
-
-                    AlmaGuajira no es una empresa de una sola persona. Contamos con un equipo muy activo y
-                    comprometido que se esfuerza constantemente por brindar a los turistas y aventuresros una
-                    mejor
-                    experiencia.
-
                     Alma guajira es una agencia de viajes ubicada en Riohacha capital y centro del turismo de La
                     Guajira, conformada por un equipo de trabajo apasionado y calificado.
                     Trabajamos con esmero para brindar experiencias turísticas de calidad en los viajes con
@@ -53,8 +47,12 @@
                                     </template>
                                 </v-img>
                             </v-avatar>
-                            <div class="text-h5 mt-3 example-text" style="font-family: 'Montserrat', sans-serif !important;">{{ item.name }}</div>
-                            <div class="text-h6 secondary--text example-text" style="font-family: 'Montserrat', sans-serif !important;">{{ item.ocupation }}</div>
+                            <div class="text-h5 mt-3 example-text"
+                                 style="font-family: 'Montserrat', sans-serif !important;">{{ item.name }}
+                            </div>
+                            <div class="text-h6 secondary--text example-text"
+                                 style="font-family: 'Montserrat', sans-serif !important;">{{ item.ocupation }}
+                            </div>
 
                         </div>
 
