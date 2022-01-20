@@ -228,10 +228,11 @@ import logo from '@/../images/logo.jpg'
 import eslogan from '@/../images/eslogan-nuevo.png'
 import bg1 from '../../images/bg-almaguajira-1.jpg'
 
-import imagen1 from '@/../images/destinos/imagen1.jpg'
-import imagen2 from '@/../images/destinos/imagen2.jpg'
 import imagen3 from '../../images/destinos/Imagen3.jpg'
 import imagen4 from '@/../images/destinos/imagen4.jpg'
+import imagen5 from '@/../images/destinos/imagen5.jpg'
+import imagen7 from '@/../images/destinos/imagen7.jpg'
+
 
 import bp1 from '../../images/buenas_practicas/buenas-practicas1.png'
 import bp2 from '../../images/buenas_practicas/buenas-practicas2.png'
@@ -256,28 +257,20 @@ export default {
         bg1: bg1,
         items: [
             {
-                link: "#",
-                src: imagen1,
-                description: "Most Searched of 2020",
-                content: "30 Places"
-            },
-            {
-                link: "#",
-                src: imagen2,
-                description: "Best Openings of 2020",
-                content: "30 Places"
-            },
-            {
-                link: "#",
+                link: "/our-fates/detail/3",
                 src: imagen3,
-                description: "Trending This Week",
-                content: "30 Places"
             },
             {
-                link: "#",
+                link: "/our-fates/detail/4",
                 src: imagen4,
-                description: "Best Of New York",
-                content: "30 Places"
+            },
+            {
+                link: "/our-fates/detail/5",
+                src: imagen5,
+            },
+            {
+                link: "/our-fates/detail/7",
+                src: imagen7,
             }
 
         ],

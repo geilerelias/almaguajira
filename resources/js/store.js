@@ -16,6 +16,7 @@ const store = new Vuex.Store({
             {title: "Inicio", icon: 'mdi-home', route: "home"},
             {title: "Nosotros", icon: 'mdi-account-question', route: "about-us"},
             {title: "Nuestros destinos", icon: 'mdi-railroad-light', route: "our-fates"},
+            {title: "Preguntas frecuentes", icon: 'mdi-chat-question', route: "frequent-questions"},
             // {title: "Galería", icon: 'mdi-play-box-multiple', route: "gallery"},
             {title: "Contáctenos", icon: 'mdi-card-account-phone', route: "contact-us"},
         ],

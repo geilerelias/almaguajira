@@ -54,6 +54,12 @@
                             class="text-decoration-none text--primary">
                             raguismendoza@hotmail.com
                         </a>
+                        &nbsp - &nbsp
+                        <a
+                            href="mailto:info@almaguajira.com <info@almaguajira.com>;"
+                            class="text-decoration-none text--primary">
+                            info@almaguajira.com
+                        </a>
                     </div>
 
 
@@ -66,7 +72,7 @@
 </template>
 
 <script>
-import {mapMutations, mapState} from "vuex";
+import {mapState} from "vuex";
 import logo from "../../images/logo-nuevo.png";
 import eslogan from "../../images/eslogan-nuevo.png";
 import tiktok from '@/../images/btns/tiktok-nuevo.png';

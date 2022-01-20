@@ -9,19 +9,23 @@
                     Nuestro equipo
                 </h1>
                 <v-divider class="primary mx-auto mb-2" style="max-width: 28px;"></v-divider>
-                <v-responsive class="mx-auto" style="max-width: 1200px;">
-                    <div class="v-responsive__content">
-                        <p class="mt-4 example-text">
-                            AlmaGuajira no es una empresa de una sola persona. Contamos con un equipo muy activo y
-                            comprometido que se esfuerza constantemente por brindar a los turistas y aventuresros una
-                            mejor
-                            experiencia.
-                        </p>
-                    </div>
+                <v-responsive class="mx-auto mt-4" style="max-width: 1200px;">
+
+                    AlmaGuajira no es una empresa de una sola persona. Contamos con un equipo muy activo y
+                    comprometido que se esfuerza constantemente por brindar a los turistas y aventuresros una
+                    mejor
+                    experiencia.
+
+                    Alma guajira es una agencia de viajes ubicada en Riohacha capital y centro del turismo de La
+                    Guajira, conformada por un equipo de trabajo apasionado y calificado.
+                    Trabajamos con esmero para brindar experiencias turísticas de calidad en los viajes con
+                    nosotros.
                 </v-responsive>
             </div>
 
-
+            <div class="font-weight-bold ">
+                Conócenos aquí:
+            </div>
             <v-sheet class="d-flex justify-center align-center mt-6">
                 <div class="layout justify-center wrap">
                     <div

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\contactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,8 +50,10 @@ Route::get('/contact-us', function () {
     return Inertia\Inertia::render('ContactUs');
 })->name('contact-us');
 
-Route::get('/{page}/{folder?}', function ($page,$folder) {
-    $directory = base_path() . '/resources/images/'.$page.'/' . $folder;
+Route::post('/send-mail', [contactController::class, 'send'])->name('send-email');
+
+Route::get('/{page}/{folder?}', function ($page, $folder) {
+    $directory = base_path() . '/resources/images/' . $page . '/' . $folder;
     $dirint = dir($directory);
     $images = array();
     while (($archivo = $dirint->read()) !== false) {
