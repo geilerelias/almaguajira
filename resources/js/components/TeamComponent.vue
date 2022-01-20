@@ -79,7 +79,7 @@ export default {
             {
                 name: "Raguis Mendoza",
                 description: '',
-                ocupation: 'Co-Founder - CEO & Guía de turismo',
+                ocupation: 'Guía de turismo',
                 image: raguisMendoza
             },
             {
