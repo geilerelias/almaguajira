@@ -105,116 +105,10 @@
             </v-container>
         </section>
 
-        <v-sheet class=" theme--light">
-            <v-container class=" py-4 py-lg-8">
-                <v-row>
-                    <v-col class="col-md-4 col-12 fill-height">
-                        <h2 class="text-h6 text-lg-h5 secondary--text font-weight-black text-uppercase">
-                            NUESTROS VIAJEROS NOS RECOMIENDAN
-                        </h2>
-                        <v-divider class="primary  mb-6" style="max-width: 28px;"></v-divider>
-                    </v-col>
-                    <v-col class="pa-md-0 col-md-8 col-12">
-                        <v-row>
+        <testimonials-component></testimonials-component>
 
-                            <v-col v-for="item in imgsTestimonios" :key="item.id"
-                                   class="col-sm-6 col-12">
-                                <v-sheet class=" theme--light surface">
-                                    <img :src="item"/>
-                                </v-sheet>
-                            </v-col>
-                        </v-row>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </v-sheet>
 
-        <v-sheet class="rounded-0">
-            <div class="text-center mb-6">
-                <h2 class="text-h6 text-lg-h5 secondary--text font-weight-black text-uppercase">
-                    BUENAS PRACTICAS
-                </h2>
-                <v-divider class="primary mx-auto mb-6" style="max-width: 28px;"></v-divider>
-            </div>
-
-            <v-container>
-                <v-row>
-                    <v-col class="col-md-6 col-12">
-                        <v-container class="pa-0">
-                            <v-row class="no-gutters justify-start">
-                                <v-col class="col col-2">
-                                    <div class="text-h2 success--text font-weight-bold pr-8">
-                                        01
-                                    </div>
-                                </v-col>
-                                <v-col class="col col-9">
-                                    <div class="text-body-2 font-weight-regular mb-1 text-left grey--text">
-                                        backed up
-                                    </div>
-                                    <h3 class="text-uppercase text-h6 font-weight-bold mb-1 text-left">
-                                        Respaldo
-                                    </h3>
-
-                                    <v-divider class="primary mr-auto mb-6"
-                                               style="max-width: 28px;">
-                                    </v-divider>
-                                    <p class="base-body text-body-1 grey--text text--darken-1 text-left mb-6">
-                                        Estás respaldado por la asistencia al viajero de Colasistencia.
-                                    </p>
-                                    <div class="my-1">
-                                        <div class="v-sheet theme--light surface">
-                                            <img
-                                                :src="imgsBuenasPracticas[4]"/>
-                                        </div>
-                                    </div>
-                                </v-col>
-
-                            </v-row>
-                        </v-container>
-                    </v-col>
-                    <v-col class="col-md-6 col-12">
-                        <v-container class="pa-0">
-                            <v-row class="no-gutters justify-start">
-                                <v-col class="col col-2">
-                                    <div class="text-h2 success--text font-weight-bold pr-8">
-                                        02
-                                    </div>
-                                </v-col>
-                                <v-col class="col col-9">
-                                    <div class="text-body-2 font-weight-regular mb-1 text-left grey--text">
-                                        training
-                                    </div>
-                                    <h3 class="text-uppercase text-h6 font-weight-bold mb-1 text-left">
-                                        Capacitaciones
-                                    </h3>
-
-                                    <v-divider class="primary mr-auto mb-6"
-                                               style="max-width: 28px;">
-                                    </v-divider>
-                                    <p class="base-body text-body-1 grey--text text--darken-1 text-left mb-6">
-                                        Nos capacitamos constantemente.
-                                    </p>
-
-                                    <div class="my-4">
-                                        <v-row dense>
-                                            <v-col v-for="item in imgsBuenasPracticas.slice(0,4)" :key="item.id"
-                                                   class="col-sm-6 col-md-3 col-12">
-                                                <div class="v-sheet theme--light surface">
-                                                    <img
-                                                        :src="item"/>
-                                                </div>
-                                            </v-col>
-                                        </v-row>
-                                    </div>
-                                </v-col>
-
-                            </v-row>
-                        </v-container>
-                    </v-col>
-
-                </v-row>
-            </v-container>
-        </v-sheet>
+        <good-practices-component></good-practices-component>
 
         <team-component class="mb-12"></team-component>
     </app-layout>
@@ -245,10 +139,15 @@ import t2 from '../../images/testimonios/testimonio2.png'
 import t3 from '../../images/testimonios/testimonio3.png'
 import t4 from '../../images/testimonios/testimonio4.png'
 
+import TestimonialsComponent from "../components/TestimonialsComponent"
+import GoodPracticesComponent from "@/components/GoodPracticesComponent";
+
 
 export default {
     components: {
         AppLayout,
+        TestimonialsComponent,
+        GoodPracticesComponent,
         TeamComponent
     },
     data: () => ({

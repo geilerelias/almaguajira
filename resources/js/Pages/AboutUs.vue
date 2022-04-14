@@ -73,13 +73,13 @@
 
                                     <v-col class="col col-12">
                                         <h3
-                                            class="text-uppercase text-h6 font-weight-bold mb-1 text-center white--text">
+                                            class="text-uppercase monserrat-text text-h6 font-weight-bold mb-1 text-center white--text">
                                             MISION
                                         </h3>
                                         <v-divider dark class="primary mx-auto mb-6"
                                                    style="max-width: 28px;"/>
 
-                                        <p class="text-body-1 grey--text text--lighten-1 text-center mb-6 text-justify">
+                                        <p class="text-body-1 monserrat-text grey--text text--lighten-1 text-center mb-6 text-justify">
                                             Alma guajira es una empresa con enfoque social nuestro objetivo principal es
                                             crear experiencias memorables en nuestro viajero fomentando relaciones sanas
                                             entre lugareños patrimonio natural y cultural y visitantes trabajamos
@@ -97,13 +97,13 @@
                                 <v-row class="no-gutters ">
                                     <v-col class="col col-12">
                                         <h3
-                                            class="text-uppercase text-h6 font-weight-bold mb-1 text-center white--text">
+                                            class="text-uppercase text-h6 monserrat-text font-weight-bold mb-1 text-center white--text">
                                             VISION
                                         </h3>
                                         <v-divider dark class="primary mx-auto mb-6"
                                                    style="max-width: 28px;"/>
 
-                                        <p class="text-body-1 grey--text text--lighten-1 text-center mb-6 text-justify">
+                                        <p class="text-body-1 grey--text text--lighten-1 monserrat-text text-center mb-6 text-justify">
                                             Seremos al mediano plazo una empresa consolidada en nuestro departamento y
                                             marcar un antes y después en la industria del turismo en la guajira que
                                             seamos reconocidos por nuestros altos estándares de profesionalidad y
@@ -127,116 +127,9 @@
 
         <team-component class="mb-12"></team-component>
 
-        <v-sheet class=" theme--light">
-            <v-container class=" py-4 py-lg-8">
-                <v-row>
-                    <v-col class="col-md-4 col-12 fill-height">
-                        <h2 class="text-h6 text-lg-h5 secondary--text font-weight-black text-uppercase">
-                            NUESTROS VIAJEROS NOS RECOMIENDAN
-                        </h2>
-                        <v-divider class="primary  mb-6" style="max-width: 28px;"></v-divider>
-                    </v-col>
-                    <v-col class="pa-md-0 col-md-8 col-12">
-                        <v-row>
+        <testimonials-component></testimonials-component>
+        <good-practices-component></good-practices-component>
 
-                            <v-col v-for="item in imgsTestimonios" :key="item.id"
-                                   class="col-sm-6 col-12">
-                                <v-sheet class=" theme--light surface">
-                                    <img :src="item"/>
-                                </v-sheet>
-                            </v-col>
-                        </v-row>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </v-sheet>
-
-        <v-sheet class="rounded-0">
-            <div class="text-center mb-6">
-                <h2 class="text-h6 text-lg-h5 secondary--text font-weight-black text-uppercase">
-                    BUENAS PRACTICAS
-                </h2>
-                <v-divider class="primary mx-auto mb-6" style="max-width: 28px;"></v-divider>
-            </div>
-
-            <v-container>
-                <v-row>
-                    <v-col class="col-md-6 col-12">
-                        <v-container class="pa-0">
-                            <v-row class="no-gutters justify-start">
-                                <v-col cols="12" class="col-sm-2">
-                                    <div class="text-h2 success--text font-weight-bold pr-8">
-                                        01
-                                    </div>
-                                </v-col>
-                                <v-col cols="12" class="col-sm-9">
-                                    <div class="text-body-2 font-weight-regular mb-1 text-left grey--text">
-                                        backed up
-                                    </div>
-                                    <h3 class="text-uppercase text-h6 font-weight-bold mb-1 text-left">
-                                        Respaldo
-                                    </h3>
-
-                                    <v-divider class="primary mr-auto mb-6"
-                                               style="max-width: 28px;">
-                                    </v-divider>
-                                    <p class="base-body text-body-1 grey--text text--darken-1 text-left mb-6">
-                                        Estás respaldado por la asistencia al viajero de Colasistencia.
-                                    </p>
-                                    <div class="my-1">
-                                        <div class="v-sheet mx-auto surface">
-                                            <img
-                                                :src="imgsBuenasPracticas[4]"/>
-                                        </div>
-                                    </div>
-                                </v-col>
-
-                            </v-row>
-                        </v-container>
-                    </v-col>
-                    <v-col class="col-md-6 col-12">
-                        <v-container>
-                            <v-row class="no-gutters justify-start">
-                                <v-col cols="12" class="col-sm-2 ">
-                                    <div class="text-h2 success--text font-weight-bold pr-8 ">
-                                        02
-                                    </div>
-                                </v-col>
-                                <v-col cols="12" class="col col-sm-9 ">
-                                    <div class="text-body-2 font-weight-regular mb-1 text-left grey--text">
-                                        training
-                                    </div>
-                                    <h3 class="text-uppercase text-h6 font-weight-bold mb-1 text-left">
-                                        Capacitaciones
-                                    </h3>
-
-                                    <v-divider class="primary mr-auto mb-6"
-                                               style="max-width: 28px;">
-                                    </v-divider>
-                                    <p class="base-body text-body-1 grey--text text--darken-1 text-left mb-6">
-                                        Nos capacitamos constantemente.
-                                    </p>
-
-                                    <div class="my-4">
-                                        <v-row dense>
-                                            <v-col v-for="item in imgsBuenasPracticas.slice(0,4)" :key="item.id"
-                                                   class="col-sm-6 col-md-3 col-12 mx-auto">
-                                                <v-sheet class="theme--light surface mx-auto">
-                                                    <img class="mx-auto"
-                                                        :src="item"/>
-                                                </v-sheet>
-                                            </v-col>
-                                        </v-row>
-                                    </div>
-                                </v-col>
-
-                            </v-row>
-                        </v-container>
-                    </v-col>
-
-                </v-row>
-            </v-container>
-        </v-sheet>
     </app-layout>
 </template>
 
@@ -246,21 +139,24 @@ import bg from '@/../images/bg/bg2.jpg'
 import working from '@/../images/working.jpeg'
 import TeamComponent from '@/components/TeamComponent.vue'
 
-import bp1 from '../../images/buenas_practicas/buenas-practicas1.png'
-import bp2 from '../../images/buenas_practicas/buenas-practicas2.png'
-import bp3 from '../../images/buenas_practicas/buenas-practicas3.png'
+// import bp1 from '../../images/buenas_practicas/buenas-practicas1.png'
+// import bp2 from '../../images/buenas_practicas/buenas-practicas2.png'
+// import bp3 from '../../images/buenas_practicas/buenas-practicas3.png'
 import bp4 from '../../images/buenas_practicas/buenas-practicas4.png'
-import bp5 from '../../images/buenas_practicas/buenas-practicas5.png'
+// import bp5 from '../../images/buenas_practicas/buenas-practicas5.png'
 
-import t1 from '../../images/testimonios/testimonio1.png'
-import t2 from '../../images/testimonios/testimonio2.png'
-import t3 from '../../images/testimonios/testimonio3.png'
-import t4 from '../../images/testimonios/testimonio4.png'
+import bp from '../../images/buenas_practicas/logos-buenas-practicas turisticas color.png'
+
+
+import TestimonialsComponent from "../components/TestimonialsComponent"
+import GoodPracticesComponent from "@/components/GoodPracticesComponent";
 
 export default {
     components: {
         AppLayout,
-        "team-component": TeamComponent
+        TestimonialsComponent,
+        GoodPracticesComponent,
+        TeamComponent
     },
     data: () => ({
         bg,
@@ -277,8 +173,8 @@ export default {
                 href: '/about-us',
             },
         ],
-        imgsBuenasPracticas: [bp1, bp2, bp3, bp4, bp5],
-        imgsTestimonios: [t1, t2, t3, t4]
+        // imgsTestimonios: [t1, t2, t3, t4],
+
     })
 };
 </script>

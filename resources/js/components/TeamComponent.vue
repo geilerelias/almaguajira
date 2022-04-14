@@ -17,7 +17,7 @@
                 </v-responsive>
             </div>
 
-            <div class="font-weight-bold ">
+            <div class="font-weight-bold text-center ">
                 Conócenos aquí:
             </div>
             <v-sheet class="d-flex justify-center align-center mt-6">
@@ -47,10 +47,10 @@
                                     </template>
                                 </v-img>
                             </v-avatar>
-                            <div class="text-h5 mt-3 example-text"
+                            <div class="text-h5 mt-3 monserrat-text"
                                  style="font-family: 'Montserrat', sans-serif !important;">{{ item.name }}
                             </div>
-                            <div class="text-h6 secondary--text example-text"
+                            <div class="text-h6 secondary--text monserrat-text"
                                  style="font-family: 'Montserrat', sans-serif !important;">{{ item.ocupation }}
                             </div>
 

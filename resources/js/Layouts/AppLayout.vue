@@ -236,12 +236,13 @@
                     :style="$vuetify.breakpoint.mdAndUp?'margin-top: 140px !important;':$vuetify.breakpoint.smAndDown?'margin-top: 60px;':''">
                     <slot></slot>
                 </div>
+                <footer-component/>
             </main>
 
             <!-- Modal Portal -->
             <portal-target name="modal" multiple>
             </portal-target>
-            <footer-component/>
+
         </div>
     </v-app>
 </template>
@@ -301,7 +302,7 @@ body {
     font-family: 'Montserrat', sans-serif !important;
 }
 
-.example-text{
+.monserrat-text {
     font-family: 'Montserrat', sans-serif !important;
 }
 

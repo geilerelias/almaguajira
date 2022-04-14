@@ -458,8 +458,8 @@
 
 <script>
 import {mapMutations, mapState} from "vuex";
-import logo from "../../images/logo.png";
-import eslogan from "../../images/eslogan.png";
+import logo from "../../images/logo/Alma Guajira Low Poly solo mapa.png";
+import eslogan from "../../images/logo/alma-guajira nombre-slogan.png";
 
 import JetApplicationMark from "@/Jetstream/ApplicationMark";
 import JetDropdown from "@/Jetstream/Dropdown";
