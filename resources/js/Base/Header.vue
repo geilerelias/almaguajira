@@ -387,7 +387,6 @@
         </v-app-bar>
 
         <v-btn
-            v-show="fab"
             v-scroll="onScroll"
             bottom
             color="white"
