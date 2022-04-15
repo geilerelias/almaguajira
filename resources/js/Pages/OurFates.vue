@@ -83,92 +83,7 @@
             </v-container>
         </section>
 
-        <v-sheet class="rounded-0">
-            <div class="text-center mb-6">
-                <h2 class="text-h6 text-lg-h5 secondary--text font-weight-black text-uppercase">
-                    BUENAS PRACTICAS
-                </h2>
-                <v-divider class="primary mx-auto mb-6" style="max-width: 28px;"></v-divider>
-            </div>
-
-            <v-container>
-                <v-row>
-                    <v-col class="col-md-6 col-12">
-                        <v-container class="pa-0">
-                            <v-row class="no-gutters justify-start">
-                                <v-col class="col col-2">
-                                    <div class="text-h2 success--text font-weight-bold pr-8">
-                                        01
-                                    </div>
-                                </v-col>
-                                <v-col class="col col-9">
-                                    <div class="text-body-2 font-weight-regular mb-1 text-left grey--text">
-                                        backed up
-                                    </div>
-                                    <h3 class="text-uppercase text-h6 font-weight-bold mb-1 text-left">
-                                        Respaldo
-                                    </h3>
-
-                                    <v-divider class="primary mr-auto mb-6"
-                                               style="max-width: 28px;">
-                                    </v-divider>
-                                    <p class="base-body text-body-1 grey--text text--darken-1 text-left mb-6">
-                                        Estás respaldado por la asistencia al viajero de Colasistencia.
-                                    </p>
-                                    <div class="my-1">
-                                        <div class="v-sheet theme--light surface">
-                                            <img
-                                                :src="imgsBuenasPracticas[4]"/>
-                                        </div>
-                                    </div>
-                                </v-col>
-
-                            </v-row>
-                        </v-container>
-                    </v-col>
-                    <v-col class="col-md-6 col-12">
-                        <v-container class="pa-0">
-                            <v-row class="no-gutters justify-start">
-                                <v-col class="col col-2">
-                                    <div class="text-h2 success--text font-weight-bold pr-8">
-                                        02
-                                    </div>
-                                </v-col>
-                                <v-col class="col col-9">
-                                    <div class="text-body-2 font-weight-regular mb-1 text-left grey--text">
-                                        training
-                                    </div>
-                                    <h3 class="text-uppercase text-h6 font-weight-bold mb-1 text-left">
-                                        Capacitaciones
-                                    </h3>
-
-                                    <v-divider class="primary mr-auto mb-6"
-                                               style="max-width: 28px;">
-                                    </v-divider>
-                                    <p class="base-body text-body-1 grey--text text--darken-1 text-left mb-6">
-                                        Nos capacitamos constantemente.
-                                    </p>
-
-                                    <div class="my-4">
-                                        <v-row dense>
-                                            <v-col v-for="item in imgsBuenasPracticas.slice(0,4)" :key="item.id"
-                                                   class="col-sm-6 col-md-3 col-12">
-                                                <div class="v-sheet theme--light surface">
-                                                    <img
-                                                        :src="item"/>
-                                                </div>
-                                            </v-col>
-                                        </v-row>
-                                    </div>
-                                </v-col>
-
-                            </v-row>
-                        </v-container>
-                    </v-col>
-
-                </v-row>
-            </v-container>
-        </v-sheet>
+        <good-practices-component></good-practices-component>
 
     </app-layout>
 </template>
@@ -189,16 +104,14 @@ import imagen8 from '@/../images/destinos/imagen8.jpg'
 import imagen9 from '../../images/destinos/Imagen9.jpg'
 import imagen10 from '@/../images/destinos/imagen10.jpg'
 import imagen11 from '@/../images/destinos/imagen11.jpg'
+import imagen12 from '@/../images/destinos/imagen12.jpg'
 
-import bp1 from '../../images/buenas_practicas/buenas-practicas1.png'
-import bp2 from '../../images/buenas_practicas/buenas-practicas2.png'
-import bp3 from '../../images/buenas_practicas/buenas-practicas3.png'
-import bp4 from '../../images/buenas_practicas/buenas-practicas4.png'
-import bp5 from '../../images/buenas_practicas/buenas-practicas5.png'
+import goodPracticesComponent from "@/components/GoodPracticesComponent";
 
 export default {
     components: {
-        AppLayout
+        AppLayout,
+        goodPracticesComponent
     },
     data: () => ({
         bg,
@@ -280,10 +193,15 @@ export default {
                 src: imagen11,
                 description: "Best Of New York",
                 content: "30 Places"
+            },
+            {
+                link: "/our-fates/detail/12",
+                src: imagen12,
+                description: "Best Of New York",
+                content: "30 Places"
             }
 
         ],
-        imgsBuenasPracticas: [bp1, bp2, bp3, bp4, bp5],
     }),
 };
 </script>

@@ -192,11 +192,17 @@
             </v-container>
         </v-sheet>
 
-        <v-sheet class="rounded-0" style="padding: 0px;width: 100%">
-            <iframe width="100%" height="500" style="border: 0px; display: block;"
-                    src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=La%20Guajira%20colombia%20+(Alma%20Guajira)&amp;t=&amp;z=9&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 
+        <v-sheet class="gray" rounded="lg">
+            <v-container>
+                <iframe class="rounded-lg"
+                        src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d884.4310638194539!2d-72.9038642946245!3d11.529421804915296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8e8b62ca3e7d7829%3A0x5b61f25a209cf1f0!2sCra.%207H%20%2333a-15%2C%20Riohacha%2C%20La%20Guajira%2C%20Colombia!3m2!1d11.529659599999999!2d-72.903386!5e1!3m2!1ses!2sve!4v1649976655824!5m2!1ses!2sve"
+                        style="border: 0px; display: block; height: 400px; width: 100%" allowfullscreen=""
+                        loading="lazy">
+                </iframe>
+            </v-container>
         </v-sheet>
+
 
         <v-overlay :value="overlay">
             <v-progress-circular indeterminate size="64"></v-progress-circular>

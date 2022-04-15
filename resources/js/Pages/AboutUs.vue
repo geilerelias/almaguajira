@@ -34,7 +34,7 @@
                         <h1 class="font-weight-bold py-3 text-h6 text-lg-h5 font-weight-black mb-4 text-left">
                             ¿QUIENES SOMOS?
                         </h1>
-                        <p class="base-body body-1 offblack--text text--darken-1 text-left mb-10">
+                        <p class="base-body body-1 offblack--text text--darken-1 text-left mb-10 text-justify">
                             Somos un grupo de jóvenes emprendedores y nos une el amor y pasión por la identidad cultural
                             de
                             nuestra tierra.

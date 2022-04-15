@@ -18,15 +18,15 @@
 
                 <v-col v-if="exists" class="mt-4 col col-12">
                     <v-card flat>
-                        <v-btn
-                            absolute
-                            color="white"
-                            fab
-                            large
-                            right
-                            top
-                            href="https://wa.me/c/573205011419"
-                            target="_blank"
+                        <v-btn class="mt-n11"
+                               absolute
+                               color="white"
+                               fab
+                               large
+                               right
+                               top
+                               href="https://wa.me/c/573205011419"
+                               target="_blank"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                  width="100" height="100" viewBox="0 0 100 100">
@@ -100,7 +100,6 @@
                         </div>
                         <div v-if='destinos[id - 1].notas!==""'>
                             <div class="secondary--text  mb-4 d-flex align-center flex-wrap font-bold">
-
                                 Notas
                             </div>
                             <p v-html="destinos[id - 1].notas"></p>
@@ -316,6 +315,7 @@ import imagen8 from '@/../images/destinos/imagen8.jpg'
 import imagen9 from '../../images/destinos/Imagen9.jpg'
 import imagen10 from '@/../images/destinos/imagen10.jpg'
 import imagen11 from '@/../images/destinos/imagen11.jpg'
+import imagen12 from '@/../images/destinos/imagen12.jpg'
 
 import whatsapp from '@/../images/btns/whatsapp-nuevo.png'
 
@@ -531,11 +531,43 @@ export default {
                 src: imagen4,
                 name: null,
                 title: 'Amanecer en el Cabo 2 Días / 1 Noche',
-                description: "",
+                description: `
+                <div class="my-6">
+                    <h2 class="secondary--text font-weight-black">
+                        Itinerario:
+                    </h2>
+                </div>
+                <h2 class="secondary--text font-weight-black">
+                    Día 1
+                </h2>
+                <p>
+                   Saldremos desde Riohacha a la 8.00 A.M., Luego  no dirigimos a las Salinas de Manaure qué será nuestra primera estación dónde tendremos una visita guiada por las Salinas y aprenderemos el proceso que conlleva la producción y recolección de la sal mineral, luego iremos  a  Uribia la capital indígena de Colombia.
+                    <br>Al llegar al Cabo de la Vela nos acomodaremos en nuestro hospedaje, tomaremos el almuerzo y tendremos tiempo para contemplar la Bahía del cabo,  a las 5 p.m. Nos dirigiremos hacia el mirador del faro del Cabo de la Vela para contemplar desde allí la puesta del sol sobre el mar. Para luego regresar por la cena y descansar.
+
+                    </p>
+                <h2 class="mt-6 secondary--text font-weight-black">
+                    Día 2
+                </h2>
+               <p>
+                    Temprano por la mañana a las 6:30 a.m. aprox. iniciaremos un recorrido visitando las Dunas del Pilón de Azúcar, donde podrás sacar buenas fotografías y además palpara la arena dorada y limpia del desierto, luego iremos a un sitio  llamado Playa Arcoíris, una  playa exclusiva para contemplar los arcoíris que se forman producto del vapor de agua y los rayos del sol, la siguiente actividad será subir el Cerro Kama'aichi, para obtener desde la cima la mejor vista de todo el paseo, cuando hayamos bajado del cerro tendremos
+               </p>
+               <p>
+                    <span class="secondary--text">El itinerario puede variar de acuerdo a las condiciones climáticas y/o tiempo de los Turistas.</span>
+                 </p>`,
                 horarios: 'El tour comienza a las 7:00 AM',
                 tiempo: '',
                 punto_encuentro: '',
-                incluye: '',
+                incluye: `
+                <ul style="list-style: circle">
+                    <li>Transporte</li>
+                    <li>Seguro de viajes</li>
+                    <li>Guía de turismo</li>
+                    <li>Alojamientos en Chinchorro</li>
+                    <li>Alimentación</li>
+                    <li>(4 platos)</li>
+                    <li>kit de bioseguridad</li>
+                </ul>
+                `,
                 que_conoceras: `
                     <ul style="list-style: circle">
                         <li>Salinas de Manaure.</li>
@@ -549,7 +581,9 @@ export default {
                         <li>Playa arcoíris.</li>
                     </ul>
                 `,
-                notas: ''
+                notas: '',
+                recomendaciones: 'Llevar protección solar, hidratación, Vestido de baño, toallas, zapatos deportivos, sandalias'
+
             },
             {
                 link: "#",
@@ -557,7 +591,7 @@ export default {
                 name: "alta-guajira",
                 title: 'AVENTURA EN LA ALTA GUAJIRA (3 DÍAS  2 NOCHES)',
                 description: `
-                <div class="mb-6">
+                <div class="my-6">
                     <h2 class="secondary--text font-weight-black">
                         Itinerario:
                     </h2>
@@ -636,14 +670,65 @@ export default {
                     <li>Mirador de Casares</li>
                 </ul>
                 `,
-                notas: ''
+                notas: '',
+                recomendaciones: `
+                 <ul style="list-style: circle">
+                    <li>Llevar protección Solar</li>
+                    <li>Linterna</li>
+                    <li>Ropa cómoda, tenis</li>
+                    <li>Repelente.</li>
+                    <li>Utensilios de Aseo personal.</li>
+                    <li>Medicamentos</li>
+                    <li>Documentos de identificación.</li>
+                 </ul>
+                `
             },
             {
                 link: "#",
                 src: imagen6,
                 name: null,
                 title: `Alta Guajira 4 Días / 3 Noches`,
-                description: "",
+                description: `
+                <div class="mb-6">
+                    <h2 class="secondary--text font-weight-black">
+                        Itinerario:
+                    </h2>
+                </div>
+                <h2 class="secondary--text font-weight-black">
+                    Día 1
+                </h2>
+                <p>
+                    Este tour comienza a las 7:30 a.m. desde Riohacha; luego nos dirigimos hacia Manaure a través de un camino en medio del desierto. En Manaure, tendremos una visita guiada  para conocer el proceso de producción  de sal.
+                    <br>Luego pasaremos por Uribia, la capital indígena de Colombia, allí tendremos una breve descripción del lugar y luego cruzaremos la vía férrea,  el majestuoso desierto para llegar a Cabo de la Vela, allí almorzaremos y descansaremos para visitar Playa Arcoíris, Pilón de Azúcar y el faro para disfrutar de una hermosa puesta de sol.
+                 </p>
+                <h2 class="mt-6 secondary--text font-weight-black">
+                    Día 2
+                </h2>
+               <p>
+                    Desayuno en el cabo de la vela  a las  7:30 AM. Salida hacia Punta Gallinas visitando los siguientes lugares, Parque eólico Jepirachi, Desierto de Puerto nuevo y Portete, Desierto de bahía honda, Desierto de Bahía Hondita
+                   <br> El almuerzo y tiempo de descanso lo tendremos en  Playa Pusheo, luego a vamos a visitar  las playas de las Dunas de Taroa para apreciar y disfrutar de este fascinante paisaje de Cielo, Desierto y Mar aquí vamos a disfrutar del  baño en el Mar de las Dunas de Taroa. Visita al faro de Punta Gallinas ubicado en la parte más al Norte de América del Sur para contemplar el atardecer frente a la Playa Punta Agujas. Cena y alojamiento en Punta Gallinas en la acomodación de su elección.
+
+                </p>
+
+                <h2 class="mt-6 secondary--text font-weight-black">
+                    Día 3
+                </h2>
+               <p>
+                    En el día estaremos en el sitio de alojamiento disfrutando de un descanso y contemplando el panorama luego a las 4:00 PM inicia el tour en lancha por las aguas de la Bahía  donde usualmente  observamos fauna silvestre como los flamencos rosados , además observaremos  el atardecer desde unos de los islotes de la zona.
+                   <br>Retornamos  al hospedaje para tomar la cena y descansar durante la noche.
+                </p>
+                <h2 class="mt-6 secondary--text font-weight-black">
+                    Día 4
+                </h2>
+               <p>
+                    Es hora de retornar a la ciudad, luego de desayunar  tomaremos rumbo hacia Riohacha, no sin antes pasar a una playa  privada  en Mayapo, donde vamos a recibir  el almuerzo y un tiempo de esparcimiento.
+                    <br>Luego de este directo hasta el lugar de hospedaje para ser despedidos.
+
+                </p>
+
+                <p>
+                    <span class="secondary--text">El itinerario puede variar de acuerdo a las condiciones climáticas y/o tiempo de los Turistas.</span>
+                 </p>`,
                 horarios: '',
                 tiempo: '',
                 punto_encuentro: '',
@@ -651,11 +736,10 @@ export default {
                 <ul style="list-style: circle">
                     <li>Transporte</li>
                     <li>Alimentación</li>
-                    <li>Acomodación en chinchorros (Hamacas)</li>
+                    <li>Alojamiento de su elección </li>
                     <li>Guía de turismo</li>
-                    <li>Sandboarding </li>
                     <li>Seguro de Viaje</li>
-                    <li>Aporte a la comunidad.</li>
+                    <li>kit de bioseguridad</li>
                 </ul>`,
                 que_conoceras: '',
                 notas: ''
@@ -742,7 +826,14 @@ export default {
                     <li>Un poco de su cultura</li>
                 </ul>
                 `,
-                notas: ''
+                notas: '',
+                recomendaciones: `
+                 <ul style="list-style: circle">
+                    <li>Vestido casual</li>
+                    <li>Evitar perfumes dulces (atrae a las abejas)</li>
+                    <li>Respetar y cuidar las diferencias étnicas.</li>
+                 </ul>
+`
             },
             {
                 link: "#",
@@ -840,12 +931,154 @@ export default {
                 Probarás Café y/o chocolate orgánicos y conocerás las hamacas más grandes del mundo más.
                 Ven con nosotros a esta aventura que será un recuerdo para toda la vida.
                 `,
+                horarios: '05:00 a.m. Desde Riohacha',
+                tiempo: '2 Días 1 Noche',
+                punto_encuentro: 'Riohacha',
+                incluye: `
+                <ul style="list-style: circle">
+                    <li>Transporte</li>
+                    <li>Alimentación (5 platos)</li>
+                    <li>Alojamiento</li>
+                    <li>Seguro de viaje</li>
+                    <li>Guianza turística</li>
+                    <li>Kit de bioseguridad</li>
+                </ul>
+                `,
+                que_conoceras: `
+                <ul style="list-style: circle">
+                    <li>Museo del cacao  de  Minca </li>
+                    <li>Museo de la memoria</li>
+                    <li>Pozo Azul</li>
+                    <li>Cascada el oído del mundo.</li>
+                    <li>Cascadas Marinka</li>
+                    <li>Mirador Hotel Sierra Minca (Antiguo Hotel casa elemento)</li>
+                    <li>Las hamacas más grandes del mundo </li>
+                </ul>`,
+                notas: 'Consulta la fecha de viaje y valor en nuestra línea de WhatsApp.',
+                recomendaciones: `
+                <ul style="list-style: circle">
+                    <li>Ropa de secado rápido</li>
+                    <li>Ropa impermeable</li>
+                    <li>Linterna</li>
+                    <li>Ropa abrigada</li>
+                    <li>Repelente</li>
+                    <li>Protector solar</li>
+                    <li>Hidratación</li>
+                </ul>
+                `
+            },
+            {
+                link: "#",
+                src: imagen12,
+                name: null,
+                title: 'PARQUE NACIONAL NATURAL MACUIRA ALTA GUAJIRA (5 DÍAS -4 NOCHES) ',
+                description: `
+                En este tour conoceremos la mayoría  los sitios de interés de la Media y Alta Guajira, nuestro sitio cumbre será el Parque nacional Natural Macuira  un área de gran importancia ambiental, ya que posee un ecosistema de bosque nublado único en el país que funciona como un regulador hídrico para la región, es un oasis en medio del desierto que sostiene una gran diversidad de fauna y flora, especialmente adaptada a sobrevivir, crecer y reproducirse en este tipo de ambiente, a su vez, salvaguarda especies de aves endémicas y migratorias, lo cual lo hizo merecedor de la declaratoria de Área Especial para la Conservación de las Aves
+                El Parque es también un escenario especialmente importante dentro de la cosmogonía, mitología, orden social y cultural de la etnia Wayuu.
+                <div class="my-6">
+                    <h2 class="secondary--text font-weight-black">
+                        Itinerario:
+                    </h2>
+                </div>
+                <h2 class="secondary--text font-weight-black">
+                    Día 1
+                </h2>
+                <p>
+                    Salida de Riohacha, visita a las salinas de Manaure para conocer las charcas donde se realiza la recolección de la sala marina, tour panorámico por Uribia, recorrido por el desierto de carrizal, llegada a Posada Wayuu o ranchería, instalación, almuerzo típico, y descanso. Por la tarde los llevaremos al Pilón de Azúcar, Playa Arcoíris, playa del ojo de agua, baño de mar y subida al cerro del faro para apreciar el atardecer, regreso al hospedaje, cena y alojamiento
+                 </p>
+
+                <h2 class="mt-6 secondary--text font-weight-black">
+                    Día 2
+                </h2>
+               <p>
+                    Desayuno y salida a Punta Gallinas recorrido por el desierto de Portete, Desierto de San José de Bahía Honda, Ranchería Pasarena, Paraíso, Nuevo ambiente, de acuerdo al tiempo de viaje tomarán el almuerzo en Ranchería de Pusheo o en el hospedaje de Punta gallinas, visita a las Dunas de Taroa, mirador de Casares, faro de Punta gallinas, llegada a Hospedaje en Punta Gallinas, cena y alojamiento
+                </p>
+
+                <h2 class="mt-6 secondary--text font-weight-black">
+                    Día 3
+                </h2>
+               <p>
+                    Desayuno, paseo en lancha en Bahía Hondita y visita a las playas de Punta Aguja, almuerzo y salida a Nazaret, llegada en horas de la tarde, instalación en hospedaje de Nazaret, cena y alojamiento según elección
+               </p>
+                <h2 class="mt-6 secondary--text font-weight-black">
+                    Día 4
+                </h2>
+               <p>
+                    Desayuno, Visita al punto de información  en la oficina de Parques Nacionales por el Eco Guía Wayuu que los acompañarán, Visita al Parque Natural de la Macuira, Piedra de Wolunka y Médano de Alewolu, almuerzo en Nazareth, Salida al Mirador Tajawou, cena   y alojamiento.
+                </p>
+
+                <h2 class="mt-6 secondary--text font-weight-black">
+                    Día 5
+                </h2>
+               <p>
+                    Desayuno y salida hacia la ciudad de Riohacha, el  almuerzo será en Pusheo o Uribia de acuerdo al tiempo de viaje.
+                </p>
+
+                <p>
+                    <span class="secondary--text">El itinerario puede variar de acuerdo a las condiciones climáticas y/o tiempo de los Turistas.</span>
+                 </p>
+
+                `,
                 horarios: '',
                 tiempo: '',
                 punto_encuentro: '',
-                incluye: '',
-                que_conoceras: '',
-                notas: ''
+                incluye: `
+                <ul style="list-style: circle">
+                    <li>Seguro  de viajes</li>
+                    <li>Transporte camionetas 4x4</li>
+                    <li>Conductor </li>
+                    <li>Asistencia de Guía de turismo</li>
+                    <li>Alimentación</li>
+                    <li>Alojamiento según su elección</li>
+                    <li>Entrada a las Salinas</li>
+                    <li>Botiquín de primeros auxilios</li>
+                    <li>Guía  en  el Parque Nacional La Macuira</li>
+                    <li>Hielera (Solicitar)</li>
+                    <li>Kit de bioseguridad</li>
+                </ul>
+                `,
+                que_conoceras: `
+                <ul style="list-style: circle">
+                    <li>Salinas de Manaure</li>
+                    <li></li>Uribia </li>
+                    <li>Vía Férrea</li>
+                    <li>Dunas del Pilón de Azúcar</li>
+                    <li>Playa Arcoíris</li>
+                    <li>Cerro Kama’ Aichi (Pilón de azúcar)</li>
+                    <li>La Bahía del Cabo de la Vela</li>
+                    <li>Parque Eólico Jepirachi</li>
+                    <li>Desierto de puerto nuevo</li>
+                    <li>Desierto de Bahía honda</li>
+                    <li>Playa Pusheo</li>
+                    <li>Dunas de Taroa</li>
+                    <li>Faro de Punta Gallinas</li>
+                    <li>Mirador de Casares </li>
+                    <li></li>Nazareth</li>
+                    <li>Parque Nacional Natural Macuira</li>
+                </ul>
+                `,
+                notas: '',
+                recomendaciones: `
+                <ul style="list-style: circle">
+                    <li>Planear y preparar el viaje con anticipación</li>
+                    <li>Respeto a los Locales  y su entorno</li>
+                    <li>Morral</li>
+                    <li>Ropa ligera para clima cálido</li>
+                    <li>Vestido de baño</li>
+                    <li>Toalla.</li>
+                    <li>Zapato tenis para senderismo</li>
+                    <li>Protección solar</li>
+                    <li>Repelente para insectos</li>
+                    <li>Abundante hidratación</li>
+                    <li>Linterna</li>
+                    <li>Elementos de aseo personal</li>
+                    <li>Medicamentos personales</li>
+                    <li>Repelente contra insectos</li>
+                    <li>Dinero en efectivo</li>
+                    <li>Documentos personales</li>
+                    <li>Batería externa</li>
+                </ul>
+                `,
             }
 
         ],

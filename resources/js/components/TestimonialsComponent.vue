@@ -10,10 +10,11 @@
                 </v-col>
             </v-row>
 
+
             <v-carousel
                 cycle
-                height="400"
                 hide-delimiter-background
+                height="100%"
             >
                 <template v-slot:prev="{ on, attrs }">
                     <v-btn
@@ -41,21 +42,24 @@
                     </v-btn>
                 </template>
                 <v-carousel-item
+                    class="fill-height"
+                    height="100%"
                     v-for="(item, i) in testimonios"
                     :key="i"
                 >
                     <v-sheet
                         color="transparent"
+                        class=" pa-12 "
                         height="100%"
-                        class="px-12"
                     >
                         <v-row
-                            class="fill-height"
                             align="center"
                             justify="center"
+                            height="100%"
                         >
 
-                            <div class="px-12 text-lg-h6 text-body-1 monserrat-text text-center text-justify">
+                            <div
+                                class=" px-12 text-lg-h6 text-body-1 monserrat-text text-justify text-sm-center ">
                                 <span class="font-weight-bold">“</span>
                                 {{ item.testimonio }}.
                                 <span class="font-weight-bold">”</span>
@@ -69,6 +73,18 @@
                                 </div>
                                 <div class="text-left">
                                     <div class="text-h6">{{ item.nombre }}</div>
+                                    <v-rating
+                                        background-color="orange lighten-3"
+                                        color="orange"
+                                        empty-icon="mdi-star-outline"
+                                        full-icon="mdi-star"
+                                        half-icon="mdi-star-half-full"
+                                        hover
+                                        length="5"
+                                        readonly
+                                        size="15"
+                                        :value="item.estrellas"
+                                    ></v-rating>
                                 </div>
                             </div>
                         </v-row>
@@ -89,20 +105,6 @@ import t4 from '@/../images/testimonios/foto-perfil-andres-errano.png'
 export default {
     name: "TestimonialsComponent",
     data: () => ({
-        colors: [
-            'indigo',
-            'warning',
-            'pink darken-2',
-            'red lighten-1',
-            'deep-purple accent-4',
-        ],
-        slides: [
-            'First',
-            'Second',
-            'Third',
-            'Fourth',
-            'Fifth',
-        ],
         testimonios: [
             {
                 src: t1,
